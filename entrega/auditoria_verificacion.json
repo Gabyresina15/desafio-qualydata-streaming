@@ -1,0 +1,9 @@
+{
+  "integra": true,
+  "seq_corrupto": null,
+  "detalle": "cadena íntegra (283 entradas)",
+  "entradas": 283,
+  "hash_cabeza": "21cd2cc70e2343b11e719d211c27ac14ef7da1ef770e8e3f1535c50e25d79575",
+  "exportado_utc": "2026-11-12T19:54:14+00:00",
+  "motivo_exportacion": "ventana_cerrada"
+}

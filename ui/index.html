@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Escudo Live · Mesa del Juez de Turno</title>
+<style>
+:root{--bg:#0d1117;--p:#161b22;--p2:#1c2330;--b:#2d3646;--t:#e6edf3;--m:#8b98a9;--ok:#2ea043;--wa:#d29922;--er:#f85149;--ac:#58a6ff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--t);font:14px/1.45 system-ui,Segoe UI,sans-serif}
+header{display:flex;flex-wrap:wrap;gap:14px;align-items:center;padding:10px 16px;background:var(--p);border-bottom:1px solid var(--b);position:sticky;top:0;z-index:5}
+h1{font-size:16px;margin:0}.pill{padding:2px 9px;border-radius:99px;font-size:12px;border:1px solid var(--b);background:var(--p2)}
+.ok{color:var(--ok);border-color:var(--ok)}.wa{color:var(--wa);border-color:var(--wa)}.er{color:var(--er);border-color:var(--er)}.ac{color:var(--ac);border-color:var(--ac)}
+.bar{flex:1;min-width:160px;height:8px;background:var(--p2);border-radius:5px;overflow:hidden}.bar i{display:block;height:100%;background:var(--ac)}
+main{max-width:1180px;margin:0 auto;padding:14px}
+nav{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}nav button{background:var(--p);color:var(--t);border:1px solid var(--b);padding:7px 14px;border-radius:8px;cursor:pointer}
+nav button.on{border-color:var(--ac);color:var(--ac)}
+.card{background:var(--p);border:1px solid var(--b);border-radius:12px;padding:14px;margin-bottom:12px}
+.card.sel{border-color:var(--ac);box-shadow:0 0 0 1px var(--ac)}.card.claim{border-color:var(--er);background:#2a1618}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px;margin:10px 0}
+.kv{background:var(--p2);border-radius:8px;padding:8px 10px}.kv b{display:block;font-size:11px;color:var(--m);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+button.go{background:var(--ok);color:#fff;border:0;border-radius:8px;padding:10px 18px;font-weight:700;cursor:pointer;font-size:15px}
+button.no{background:transparent;color:var(--er);border:1px solid var(--er);border-radius:8px;padding:10px 14px;cursor:pointer}
+button.sm{background:var(--p2);color:var(--t);border:1px solid var(--b);border-radius:6px;padding:5px 10px;cursor:pointer}
+input,select{background:var(--p2);color:var(--t);border:1px solid var(--b);border-radius:8px;padding:8px 10px}
+table{width:100%;border-collapse:collapse}th,td{padding:6px 8px;border-bottom:1px solid var(--b);text-align:left;font-size:13px;vertical-align:top}th{color:var(--m)}
+.mono{font-family:ui-monospace,Consolas,monospace;font-size:12px}.m{color:var(--m)}
+.c-ok{background:#12301b}.c-wa{background:#33290d}.c-er{background:#3a1517}
+.why{border-left:3px solid var(--ac);padding:4px 10px;margin:8px 0;background:var(--p2);border-radius:0 8px 8px 0}
+.why.alto{border-color:var(--wa)}
+details summary{cursor:pointer;color:var(--ac)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.toast{position:fixed;bottom:16px;right:16px;background:var(--p);border:1px solid var(--ac);padding:10px 14px;border-radius:10px;max-width:360px;z-index:9}
+kbd{background:var(--p2);border:1px solid var(--b);border-bottom-width:2px;border-radius:5px;padding:0 6px;font-size:12px}
+</style>
+</head>
+<body>
+<header>
+  <h1>⚖️ Escudo Live <span class="m">· Mesa del Juez de Turno</span></h1>
+  <span class="pill" id="reloj">min –</span>
+  <div class="bar"><i id="prog" style="width:0"></i></div>
+  <span class="pill" id="turno">turno –</span>
+  <span class="pill" id="yo"></span>
+</header>
+<main>
+  <div id="login" class="card" style="display:none">
+    <b>Ingreso del juez</b> <span class="m">(usuarios de demostración)</span>
+    <div class="row" style="margin-top:8px">
+      <select id="juez"></select><input id="pwd" type="password" placeholder="contraseña" value="">
+      <button class="go" onclick="login()">Ingresar</button>
+      <span class="m" id="hint"></span>
+    </div>
+  </div>
+  <div id="vencida" class="card" style="display:none;border-color:var(--er)"></div>
+  <nav>
+    <button data-t="bandeja" class="on">📥 Bandeja</button>
+    <button data-t="circuito">📡 Circuito por proveedor</button>
+    <button data-t="auditoria">🔗 Auditoría</button>
+    <button data-t="transparencia">🌐 Transparencia pública</button>
+  </nav>
+  <section id="t-bandeja"></section>
+  <section id="t-circuito" style="display:none"></section>
+  <section id="t-auditoria" style="display:none"></section>
+  <section id="t-transparencia" style="display:none"></section>
+</main>
+<div id="toast" class="toast" style="display:none"></div>
+<script>
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let token=sessionStorage.getItem('tk')||null, snap=null, tab='bandeja', sel=0, transp=[], busy=false, prevPend=0;
+function beep(hz){try{const c=new(window.AudioContext||window.webkitAudioContext)(),o=c.createOscillator(),g=c.createGain();o.frequency.value=hz;o.connect(g);g.connect(c.destination);g.gain.value=0.06;o.start();o.stop(c.currentTime+0.12)}catch(e){}}
+async function api(path,body){
+  const h={'Content-Type':'application/json'}; if(token)h.Authorization='Bearer '+token;
+  const r=await fetch(path,{method:body===undefined?'GET':'POST',headers:h,body:body===undefined?undefined:JSON.stringify(body)});
+  const j=await r.json(); if(!r.ok) throw Object.assign(new Error(j.error||r.status),{status:r.status}); return j;
+}
+function toast(m){const t=$('#toast');t.textContent=m;t.style.display='block';clearTimeout(toast.h);toast.h=setTimeout(()=>t.style.display='none',3500)}
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{tab=b.dataset.t;document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('on',x===b));
+  ['bandeja','circuito','auditoria','transparencia'].forEach(t=>$('#t-'+t).style.display=t===tab?'':'none');render()});
+async function login(){
+  try{const r=await api('/api/login',{juez_id:$('#juez').value,password:$('#pwd').value});token=r.token;sessionStorage.setItem('tk',token);toast('Ingresaste como '+r.juez.nombre);tick()}
+  catch(e){toast(e.message)}
+}
+async function logout(){try{await api('/api/logout',{})}catch(e){}token=null;sessionStorage.removeItem('tk');tick()}
+async function auto(on){try{await api('/api/auto',{activar:on});tick()}catch(e){toast(e.message)}}
+async function firmar(id,dec){ if(busy)return; busy=true; try{await api('/api/expedientes/'+id+'/firmar',{decision:dec});toast(dec==='aprobar'?'✔ Firmado y despachado a los proveedores':'Expediente rechazado y archivado');}catch(e){toast('⛔ '+e.message)} busy=false; tick()}
+async function resolver(id,dec){ if(busy)return; busy=true; try{await api('/api/reclamos/'+id+'/resolver',{decision:dec});toast('✔ Reclamo resuelto');}catch(e){toast('⛔ '+e.message)} busy=false; tick()}
+async function verificar(){const r=await api('/api/auditoria/verificar');toast((r.integra?'✔ ':'⛔ ')+r.detalle+' · cabeza '+r.hash_cabeza.slice(0,12)+'…')}
+function badge(bt){return bt==='DOMAIN_ONLY'?'<span class="pill wa">BLOQUEO SOLO POR DOMINIO</span>':'<span class="pill ac">IP + DOMINIO</span>'}
+function pendientes(){return (snap.expedientes||[]).filter(e=>e.estado==='PENDING_SIGNATURE')}
+function cardExp(e,i){
+  const pr=(e.promocion||[]).map(p=>esc(p.red)+' '+esc(p.url)).join(' · ');
+  const alto=e.riesgo_colateral!=='BAJO';
+  return `<div class="card ${i===sel?'sel':''}" onclick="sel=${i};render()">
+   <div class="row"><b style="font-size:16px">${esc(e.host)}</b> ${badge(e.block_type)}
+     <span class="pill ${alto?'wa':'ok'}">riesgo colateral ${esc(e.riesgo_colateral)}</span>
+     ${e.tipo!=='ORIGINAL'?`<span class="pill ac">${esc(e.tipo.replaceAll('_',' '))} ← ${esc(e.parent_id)}</span>`:''}
+     ${e.ratificacion?'<span class="pill er">RATIFICAR ENVÍO (cambio de turno)</span>':''}
+     <span class="m" style="margin-left:auto">${esc(e.id)} · detectado min ${e.minuto_deteccion}</span></div>
+   <div class="grid">
+     <div class="kv"><b>Servidor</b><span class="mono">${esc(e.ip)}</span></div>
+     <div class="kv"><b>Proveedor / ASN</b>${esc(e.asn.organizacion||'s/d')} <span class="m">(AS${esc(e.asn.numero)})</span></div>
+     <div class="kv"><b>Marca de agua</b>✔ señal oficial <span class="mono">${esc(e.marca)}</span></div>
+     <div class="kv"><b>Licenciatario</b>✔ no es licenciatario autorizado</div>
+     <div class="kv"><b>Sello SHA-256</b><span class="mono">${esc(e.evidence_hash.slice(0,24))}…</span></div>
+     <div class="kv"><b>Vence</b>min ${e.vence_min} (fin del partido, automático)</div>
+   </div>
+   <div class="why ${alto?'alto':''}"><b>Por qué ${e.block_type==='DOMAIN_ONLY'?'solo dominio':'también IP'}:</b> ${esc(e.motivos.join(' '))}</div>
+   <details><summary>Otros sitios en esa IP (${e.dominios_en_ip.length})</summary><div class="mono">${e.dominios_en_ip.map(esc).join('<br>')}</div></details>
+   ${pr?`<div class="m" style="margin:6px 0">Promocionado en: ${pr}</div>`:''}
+   <div class="row" style="margin-top:10px">
+     <button class="go" onclick="event.stopPropagation();firmar('${e.id}','aprobar')">✍️ Firmar y despachar <kbd>Enter</kbd></button>
+     <button class="no" onclick="event.stopPropagation();firmar('${e.id}','rechazar')">Rechazar <kbd>R</kbd></button>
+   </div></div>`;
+}
+function cardClaim(r){
+  return `<div class="card claim"><div class="row"><span class="pill er">🚨 RECLAMO PRIORITARIO</span><b>${esc(r.dominio)}</b>
+   <span class="m" style="margin-left:auto">${esc(r.id)} · min ${r.minuto} · ${esc(r.proveedor)}</span></div>
+   <p>${esc(r.mensaje)}</p><div class="why alto"><b>Verificado:</b> el sitio es legítimo y está detrás de un bloqueo vigente. <b>Acción propuesta:</b> ${esc(r.accion)}.</div>
+   <button class="go" onclick="resolver('${r.id}','levantar')">✍️ Firmar levantamiento + bloqueo fino <kbd>L</kbd></button>
+   <button class="no" onclick="resolver('${r.id}','rechazar')">Rechazar reclamo</button></div>`;
+}
+function renderBandeja(){
+  if(!snap.yo) return '<div class="card m">Ingresá con tu usuario de juez para ver tu bandeja. Cada juez ve y firma solo lo que le toca, y solo durante su turno.</div>';
+  const y=snap.yo, ps=pendientes(), rs=(snap.reclamos||[]).filter(r=>r.estado==='ABIERTO');
+  let h=`<div class="card row"><span>👤 <b>${esc(y.nombre)}</b> · ${esc(y.juzgado)}</span>
+   <span class="pill ${y.en_turno?'ok':'wa'}">${y.en_turno?'DE TURNO — podés firmar':'FUERA DE TURNO — solo lectura'}</span>
+   <label style="margin-left:auto" class="row"><input type="checkbox" ${y.auto?'checked':''} onchange="auto(this.checked)">
+   <span><b>Autodespacho asistido</b> <span class="m">(autorizo firmar expedientes verificados y reclamos validados mientras dure mi turno)</span></span></label>
+   <button class="sm" onclick="logout()">Salir</button></div>`;
+  h+=rs.map(cardClaim).join('');
+  if(!ps.length&&!rs.length) h+='<div class="card m">Sin expedientes pendientes. Cuando el feed detecte un stream pirata verificado, aparece acá al instante.</div>';
+  sel=Math.min(sel,Math.max(0,ps.length-1));
+  h+=ps.map(cardExp).join('');
+  const firmados=(snap.expedientes||[]).filter(e=>e.estado!=='PENDING_SIGNATURE');
+  h+=`<div class="m" style="margin:6px 2px">Teclas: <kbd>↑</kbd><kbd>↓</kbd> elegir · <kbd>Enter</kbd> firmar · <kbd>R</kbd> rechazar · <kbd>L</kbd> levantar reclamo. Firmados por vos: ${firmados.length}.</div>`;
+  return h;
+}
+function celda(s){
+  if(!s) return '<td class="m">–</td>';
+  const cls={CONFIRMADO:'c-ok',HEREDADO:'c-ok',VENCIDO:'c-ok',ENVIANDO:'c-wa',NUEVO:'c-wa',PENDING_SIGN:'c-wa',LEVANTADO:'c-er',CANCELADO:'c-er'}[s.estado]||'';
+  return `<td class="${cls}">${esc(s.tipo)} · ${esc(s.estado)}${s.aplicada_min!=null?`<br><span class="m">min ${s.aplicada_min}</span>`:''}${s.reintentos?`<br><span class="m">${s.reintentos} reintento(s)</span>`:''}</td>`;
+}
+function renderCircuito(){
+  if(!snap.yo) return '<div class="card m">Ingresá para ver el circuito de tus expedientes.</div>';
+  const ps=snap.proveedores, es=(snap.expedientes||[]).filter(e=>e.slots.length);
+  if(!es.length) return '<div class="card m">Todavía no firmaste ninguna orden.</div>';
+  return `<div class="card"><table><tr><th>Expediente</th>${ps.map(p=>`<th>${esc(p.nombre)}<br><span class="m">acepta: ${p.capacidades.join(', ')}</span></th>`).join('')}<th>Todos confirmados</th></tr>`+
+   es.map(e=>`<tr><td><b>${esc(e.host)}</b><br><span class="m">${esc(e.id)} · ${esc(e.block_type_vigente)} · ${esc(e.estado)}</span></td>`+
+    ps.map(p=>`<td>${e.slots.filter(s=>s.pid===p.id).map(s=>`<div class="${({CONFIRMADO:'c-ok',HEREDADO:'c-ok',VENCIDO:'c-ok',LEVANTADO:'c-er',CANCELADO:'c-er'}[s.estado])||'c-wa'}" style="padding:3px 6px;margin-bottom:3px;border-radius:5px">${esc(s.tipo)} · ${esc(s.estado)}${s.aplicada_min!=null?' · min '+s.aplicada_min:''}${s.reintentos?' · ↻'+s.reintentos:''}</div>`).join('')||'<span class="m">–</span>'}</td>`).join('')+
+    `<td>${e.confirmado_todos_min!=null?`min ${e.confirmado_todos_min}<br><span class="m">+${(e.confirmado_todos_min-e.minuto_deteccion).toFixed(2)} min desde detección</span>`:'<span class="m">en curso…</span>'}</td></tr>`).join('')+'</table></div>';
+}
+function renderAuditoria(){
+  const a=(snap.auditoria||[]).slice().reverse();
+  return `<div class="card row"><b>Registro append-only encadenado (SHA-256)</b> <span class="m">${snap.auditoria_total} eventos</span>
+   <button class="sm" onclick="verificar()">Verificar integridad</button></div><div class="card"><table><tr><th>#</th><th>min</th><th>evento</th><th>detalle</th><th>hash</th></tr>`+
+   a.map(e=>`<tr><td>${e.seq}</td><td>${e.min??''}</td><td><b>${esc(e.tipo)}</b></td><td class="mono">${esc(JSON.stringify(e.datos).slice(0,150))}</td><td class="mono m">${e.prevHash.slice(0,6)}→${e.currentHash.slice(0,10)}</td></tr>`).join('')+'</table></div>';
+}
+function renderTransp(){
+  return `<div class="card"><b>Registro público de transparencia</b> <span class="m">qué se bloqueó, desde cuándo, hasta cuándo y por orden de quién</span><table><tr><th>Objetivo</th><th>Tipo</th><th>Proveedor</th><th>Estado</th><th>Desde</th><th>Hasta</th><th>Juez</th><th>Exp.</th></tr>`+
+   transp.map(t=>`<tr><td>${esc(t.objetivo)}</td><td>${esc(t.tipo)}</td><td>${esc(t.proveedor)}</td><td>${esc(t.estado)}</td><td>${t.aplicada_min??'–'}</td><td>${t.hasta_min}</td><td>${esc(t.juez)}</td><td>${esc(t.expediente)}</td></tr>`).join('')+'</table></div>';
+}
+function render(){
+  if(!snap)return;
+  const e=snap.estado;
+  $('#reloj').textContent='⏱ minuto '+e.minuto.toFixed(1)+' / '+e.fin_min+(e.finalizado?' · FIN':'')+' (x'+e.acelerar+')';
+  $('#prog').style.width=Math.min(100,100*e.minuto/e.fin_min)+'%';
+  $('#turno').textContent='de turno: '+(e.jueces_de_turno.map(j=>snap.jueces[j]?.nombre||j).join(', ')||'—');
+  $('#turno').className='pill '+(e.jueces_de_turno.length?'ok':'wa');
+  $('#yo').textContent=snap.yo?snap.yo.nombre:'sin sesión';
+  const lg=$('#login'); lg.style.display=snap.yo?'none':'';
+  if(!$('#juez').options.length){ $('#juez').innerHTML=Object.entries(snap.jueces).map(([k,v])=>`<option value="${k}">${esc(v.nombre)} — ${esc(v.juzgado)}</option>`).join(''); $('#hint').textContent='demo: laura-demo-2026 / martin-demo-2026'; }
+  const v=$('#vencida'); if(snap.yo&&snap.yo.revocada){v.style.display='';v.innerHTML='⛔ <b>Tu credencial de turno fue invalidada</b> (cambió el turno). Lo pendiente pasó al juez entrante.'} else v.style.display='none';
+  const totPend=pendientes().length+((snap.reclamos||[]).filter(r=>r.estado==='ABIERTO').length);
+  document.title=(totPend?`(${totPend}) `:'')+'Escudo Live · Mesa del Juez de Turno';
+  if(totPend>prevPend&&snap.yo){beep((snap.reclamos||[]).some(r=>r.estado==='ABIERTO')?880:660);toast('🔔 Nuevo pendiente en bandeja ('+totPend+')');}
+  prevPend=totPend;
+  if(tab==='bandeja')$('#t-bandeja').innerHTML=renderBandeja();
+  if(tab==='circuito')$('#t-circuito').innerHTML=renderCircuito();
+  if(tab==='auditoria')$('#t-auditoria').innerHTML=renderAuditoria();
+  if(tab==='transparencia')$('#t-transparencia').innerHTML=renderTransp();
+}
+async function tick(){
+  try{ snap=await api('/api/snapshot'); if(tab==='transparencia')transp=await api('/api/transparencia'); }
+  catch(e){ if(e.status===401){token=null;sessionStorage.removeItem('tk');} }
+  render();
+}
+document.addEventListener('keydown',ev=>{
+  if(['INPUT','SELECT','TEXTAREA'].includes(ev.target.tagName)||!snap||!snap.yo||tab!=='bandeja')return;
+  const ps=pendientes(), rs=(snap.reclamos||[]).filter(r=>r.estado==='ABIERTO');
+  if(ev.key==='ArrowDown'){sel=Math.min(sel+1,ps.length-1);render()}
+  else if(ev.key==='ArrowUp'){sel=Math.max(sel-1,0);render()}
+  else if(ev.key==='Enter'){ if(rs.length)resolver(rs[0].id,'levantar'); else if(ps[sel])firmar(ps[sel].id,'aprobar') }
+  else if(ev.key.toLowerCase()==='l'&&rs.length)resolver(rs[0].id,'levantar');
+  else if(ev.key.toLowerCase()==='r'&&ps[sel])firmar(ps[sel].id,'rechazar');
+});
+setInterval(tick,500); tick();
+</script>
+</body>
+</html>
