@@ -24,10 +24,11 @@ def main() -> None:
     ap.add_argument("--salir-al-exportar", action="store_true", help="termina el proceso tras la exportación final")
     ap.add_argument("--solo-ip-en-dedicadas", action="store_true", help="en IPs dedicadas envía solo IP a ISPs compatibles")
     ap.add_argument("--demo-forzar-ip", action="store_true", help="solo demo/video: fuerza 1 bloqueo IP en IP compartida para probar reclamos")
+    ap.add_argument("--permitir-autodespacho", action="store_true", help="habilita autodespacho asistido (solo práctica/tests; apagado en el final)")
     a = ap.parse_args()
 
     plat = Plataforma(a.simulador, a.juzgados, a.usuarios, a.salida, a.entrega,
-                      a.salir_al_exportar, a.solo_ip_en_dedicadas, a.demo_forzar_ip)
+                      a.salir_al_exportar, a.solo_ip_en_dedicadas, a.demo_forzar_ip, a.permitir_autodespacho)
     plat.exportador = exportar
     srv = crear_servidor(plat, a.puerto)
     threading.Thread(target=srv.serve_forever, daemon=True).start()

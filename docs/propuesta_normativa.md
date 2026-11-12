@@ -7,7 +7,7 @@
 1. **Orden marco y jueces de turno.**
    - Una resolución crea un régimen federal de turnos: cada juzgado designa un juez de guardia por franja horaria, publicada en un registro oficial.
    - El juez ingresa con credencial personal y **solo firma mientras está de turno**. Al cambiar el turno, su credencial deja de valer y lo pendiente pasa al juez entrante.
-   - La decisión del juez es siempre personal y queda firmada. Puede delegar en el sistema solo el *trámite* (cálculo de vencimiento, envío, reintentos), nunca la decisión.
+   - **La decisión del juez es siempre manual y queda firmada** por cada expediente y reclamo; nadie firma en su nombre. El sistema solo asiste en el armado de evidencia, la verificación de reglas, el cálculo del vencimiento y el envío/reintentos tras la firma judicial.
 2. **Registro único de proveedores de internet (ISP).**
    - ENACOM mantiene un registro obligatorio y actualizado: contacto técnico, tipos de bloqueo que soporta (IP, dominio) y cantidad de clientes.
    - Todo ISP debe recibir órdenes por una API estándar y **confirmar la aplicación en un plazo máximo** fijado por la norma (por ejemplo, 10 minutos para los grandes y 30 para los chicos).
@@ -18,7 +18,7 @@
    - El bloqueo por IP solo se permite cuando la IP está 100 % dedicada al stream pirata.
    - Si una IP bloqueada pasa a ser compartida, se revisa de oficio.
 5. **Caducidad automática.** Todo bloqueo por IP vence solo al terminar el partido; el vencimiento va escrito en la orden firmada. Prorrogar exige una nueva orden. Los bloqueos por dominio duran lo que diga la orden, con tope fijo.
-6. **Reclamos de sitios afectados.** Cualquier sitio puede reclamar por un canal público. El juez de turno debe resolver en un plazo breve y fijo: levanta la orden con su firma y, si corresponde, la reemplaza por un bloqueo más preciso. El reclamo y su resolución quedan en el registro.
+6. **Reclamos de sitios afectados.** Cualquier sitio puede reclamar por un canal público. El juez de turno debe resolver dentro de un plazo máximo de **15 minutos**: levanta la orden con su firma y, si corresponde, la reemplaza por un bloqueo más preciso. El reclamo y su resolución quedan en el registro.
 7. **Auditoría y transparencia.**
    - Cada paso (detección, firma, envío, confirmación, reclamo, vencimiento) se guarda en un registro que no se puede reescribir.
    - Un registro público muestra qué se bloqueó, desde cuándo, hasta cuándo y por orden de quién.

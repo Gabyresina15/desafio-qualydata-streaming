@@ -58,7 +58,7 @@ def crear_servidor(plat, puerto: int, host: str = "0.0.0.0") -> ThreadingHTTPSer
             if p == "/api/snapshot":
                 return self._manejar(lambda: plat.snapshot(self._token(), int(q.get("desde", "0"))))
             if p == "/api/transparencia":
-                return self._manejar(plat.transparencia)
+                return self._manejar(plat.transparencia_publica)
             if p == "/api/auditoria":
                 return self._manejar(lambda: plat.ledger.copia())
             if p == "/api/auditoria/verificar":

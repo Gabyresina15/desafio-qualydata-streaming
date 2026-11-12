@@ -41,7 +41,7 @@ def _pbkdf2(pwd: str, sal: bytes) -> str:
 class Plataforma:
     def __init__(self, base: str, juzgados_path: Path, usuarios_path: Path, salida: Path, entrega: Path,
                  salir_al_exportar: bool = False, solo_ip_en_dedicadas: bool = False,
-                 demo_forzar_ip: bool = False):
+                 demo_forzar_ip: bool = False, permitir_autodespacho: bool = False):
         self.sim = SimClient(base)
         self.reloj = RelojPartido()
         self.salida, self.entrega = Path(salida), Path(entrega)
@@ -52,7 +52,9 @@ class Plataforma:
         self.salir_al_exportar = salir_al_exportar
         self.solo_ip_en_dedicadas = solo_ip_en_dedicadas
         self.demo_forzar_ip = demo_forzar_ip
+        self.permitir_autodespacho = permitir_autodespacho
         self._demo_ip_forzada: Optional[str] = None
+        self.ultimo_sello_ledger: Optional[dict] = None
 
         datos = json.loads(Path(juzgados_path).read_text(encoding="utf-8"))
         usuarios = json.loads(Path(usuarios_path).read_text(encoding="utf-8"))["usuarios"]
@@ -236,6 +238,8 @@ class Plataforma:
             self.log("LOGOUT_JUEZ", juez_id=s["juez_id"])
 
     def set_auto(self, token: str, activar: bool) -> dict:
+        if not self.permitir_autodespacho:
+            raise Error(403, "Autodespacho deshabilitado: en modo oficial cada orden requiere firma manual")
         s = self.sesion(token)
         with self.lock:
             s["auto"] = bool(activar)
@@ -420,13 +424,7 @@ class Plataforma:
                 self.pool.submit(self._post_orden, exp_id, key, "cobertura_paralela_isp_inestable")
 
     def _ratificar(self, exp: dict, slot: dict) -> bool:
-        """El juez firmante ya no está de turno: el envío debe ser ratificado por quien está de turno."""
-        cand = next((j for j in self.jueces_en_turno() if self.sesion_activa(j)), None)
-        if cand and self.auto_activo(cand):
-            exp["firmante"], exp["firmado_via"] = cand, "AUTO_POLICY"
-            self.log("RATIFICACION_AUTOMATICA", expediente=exp["id"], juez_id=cand,
-                     motivo="reenvío tras cambio de turno: el firmante original ya no puede firmar")
-            return True
+        """El juez firmante ya no está de turno: el envío debe ser ratificado manualmente por quien está de turno."""
         slot["estado"] = "PENDING_SIGN"
         if exp["estado"] != "PENDING_SIGNATURE":
             exp["estado"] = "PENDING_SIGNATURE"
@@ -793,6 +791,7 @@ class Plataforma:
                 "reclamos": [{k: v for k, v in r.items() if k != "ordenes"} for r in rcs],
                 "stats": self._stats(exps),
                 "proveedores": [{"id": p["id"], "nombre": p["nombre"], "capacidades": p["capacidades"]} for p in self.proveedores],
+                "permitir_autodespacho": self.permitir_autodespacho,
                 "auditoria": self.ledger.copia(desde_seq)[-200:],
                 "auditoria_total": len(self.ledger.entradas),
             }
@@ -805,6 +804,25 @@ class Plataforma:
         return {"expedientes": len(exps), "por_estado": c, "ignorados": ign,
                 "reintentos": sum(1 for e in self.ledger.copia() if e["tipo"] == "REINTENTO_ISP")}
 
+    def sellar_ledger(self, motivo: str) -> dict:
+        """Sella la cabeza actual del ledger con una firma HMAC del juez de turno de cierre."""
+        with self.lock:
+            activos = self.jueces_en_turno()
+            juez_id = activos[0] if activos else (self.turnos[-1]["juez_id"] if self.turnos else next(iter(self.jueces)))
+            j = self.jueces[juez_id]
+            cabeza_previa = self.ledger.cabeza()
+            firma_ledger = hmac_hex(j["clave"], f"LEDGER|{cabeza_previa}|{juez_id}|{motivo}")
+            entrada = self.log("LEDGER_SELLADO", cabeza_sellada=cabeza_previa, juez_id=juez_id,
+                               motivo=motivo, firma_ledger=firma_ledger)
+            self.ultimo_sello_ledger = {
+                "cabeza_sellada": cabeza_previa,
+                "hash_sello": entrada["currentHash"],
+                "juez_id": juez_id,
+                "motivo": motivo,
+                "firma_ledger": firma_ledger,
+            }
+            return dict(self.ultimo_sello_ledger)
+
     def transparencia(self) -> List[dict]:
         out = []
         with self.lock:
@@ -816,6 +834,14 @@ class Plataforma:
                             "estado": r["estado"], "aplicada_min": r["aplicada_min"], "hasta_min": exp["vence_min"],
                             "juez": self.jueces[r["juez_id"]]["nombre"]})
         return out
+
+    def transparencia_publica(self) -> dict:
+        with self.lock:
+            return {
+                "hash_cabeza_ledger": self.ledger.cabeza(),
+                "sello_ledger": self.ultimo_sello_ledger,
+                "ordenes": self.transparencia(),
+            }
 
     def detener(self) -> None:
         self.activo = False

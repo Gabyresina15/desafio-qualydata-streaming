@@ -1,9 +1,16 @@
 {
   "integra": true,
   "seq_corrupto": null,
-  "detalle": "cadena íntegra (283 entradas)",
-  "entradas": 283,
-  "hash_cabeza": "21cd2cc70e2343b11e719d211c27ac14ef7da1ef770e8e3f1535c50e25d79575",
-  "exportado_utc": "2026-11-12T19:54:14+00:00",
+  "detalle": "cadena íntegra (284 entradas)",
+  "entradas": 284,
+  "hash_cabeza": "6c652647146adf8c46854a0d04658a61c991abb10fbb4f5eebc85cab524f95cb",
+  "sello_ledger": {
+    "cabeza_sellada": "e77837a1dca4a591fcb4705dd054776e6cbf63ffe494279bacf56e6b1cac62ea",
+    "hash_sello": "6c652647146adf8c46854a0d04658a61c991abb10fbb4f5eebc85cab524f95cb",
+    "juez_id": "juez-martin-ejemplo",
+    "motivo": "ventana_cerrada",
+    "firma_ledger": "b66d1ca7d85deeee7d6927aceae4b890dafbc26e5ec8153909ca0c33de5d39e3"
+  },
+  "exportado_utc": "2026-11-12T21:40:29+00:00",
   "motivo_exportacion": "ventana_cerrada"
 }

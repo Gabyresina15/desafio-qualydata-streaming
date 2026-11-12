@@ -18,9 +18,11 @@ def exportar(plat, motivo: str) -> None:
     out: Path = plat.entrega
     out.mkdir(parents=True, exist_ok=True)
     with plat.lock:
+        sello_ledger = plat.sellar_ledger(motivo)
         expedientes = []
         for exp in plat.expedientes.values():
             e = _limpio(exp)
+            e["decision"] = ("rechazar" if exp["estado"] == "REJECTED" else "aprobar") if exp.get("firmante") else None
             e["slots"] = [dict(s) for s in exp["slots"].values()]
             e["ordenes_isp"] = [
                 {k: r[k] for k in ("pid", "oid", "tipo", "objetivo", "estado", "aplicada_min", "juez_id")}
@@ -33,8 +35,11 @@ def exportar(plat, motivo: str) -> None:
                                  else round(exp["confirmado_todos_min"] - exp["minuto_deteccion"], 3)}
             expedientes.append(e)
         reclamos = [_limpio({**r, "ordenes": [list(o) for o in r["ordenes"]]}) for r in plat.reclamos.values()]
+        ordenes_transp = plat.transparencia()
         entradas = plat.ledger.copia()
     ok, seq, msg = verificar_cadena(entradas)
+    exportado_utc = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    hash_cabeza = entradas[-1]["currentHash"] if entradas else None
     (out / "expedientes.json").write_text(json.dumps(expedientes, ensure_ascii=False, indent=2), encoding="utf-8")
     ejemplo = next((e for e in expedientes if e["estado"] in ("EXPIRED", "ACTIVE") and e["block_type"] == "DOMAIN_ONLY"), None) \
         or next((e for e in expedientes if e["estado"] in ("EXPIRED", "ACTIVE")), None) or (expedientes[0] if expedientes else {})
@@ -45,8 +50,12 @@ def exportar(plat, motivo: str) -> None:
             f.write(json.dumps(e, ensure_ascii=False, sort_keys=True) + "\n")
     (out / "auditoria_verificacion.json").write_text(json.dumps(
         {"integra": ok, "seq_corrupto": seq, "detalle": msg, "entradas": len(entradas),
-         "hash_cabeza": entradas[-1]["currentHash"] if entradas else None, "exportado_utc":
-         datetime.now(timezone.utc).isoformat(timespec="seconds"), "motivo_exportacion": motivo},
+         "hash_cabeza": hash_cabeza, "sello_ledger": sello_ledger, "exportado_utc": exportado_utc,
+         "motivo_exportacion": motivo},
+        ensure_ascii=False, indent=2), encoding="utf-8")
+    (out / "transparencia.json").write_text(json.dumps(
+        {"exportado_utc": exportado_utc, "motivo_exportacion": motivo,
+         "hash_cabeza_ledger": hash_cabeza, "sello_ledger": sello_ledger, "ordenes": ordenes_transp},
         ensure_ascii=False, indent=2), encoding="utf-8")
     por_tipo = {}
     for e in entradas:

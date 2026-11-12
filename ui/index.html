@@ -124,8 +124,8 @@ function renderBandeja(){
   const y=snap.yo, ps=pendientes(), rs=(snap.reclamos||[]).filter(r=>r.estado==='ABIERTO');
   let h=`<div class="card row"><span>👤 <b>${esc(y.nombre)}</b> · ${esc(y.juzgado)}</span>
    <span class="pill ${y.en_turno?'ok':'wa'}">${y.en_turno?'DE TURNO — podés firmar':'FUERA DE TURNO — solo lectura'}</span>
-   <label style="margin-left:auto" class="row"><input type="checkbox" ${y.auto?'checked':''} onchange="auto(this.checked)">
-   <span><b>Autodespacho asistido</b> <span class="m">(autorizo firmar expedientes verificados y reclamos validados mientras dure mi turno)</span></span></label>
+   ${snap.permitir_autodespacho?`<label style="margin-left:auto" class="row"><input type="checkbox" ${y.auto?'checked':''} onchange="auto(this.checked)">
+   <span><b>Autodespacho asistido</b> <span class="m">(solo práctica)</span></span></label>`:'<span class="pill ac" style="margin-left:auto">Modo oficial · firma manual obligatoria</span>'}
    <button class="sm" onclick="logout()">Salir</button></div>`;
   h+=rs.map(cardClaim).join('');
   if(!ps.length&&!rs.length) h+='<div class="card m">Sin expedientes pendientes. Cuando el feed detecte un stream pirata verificado, aparece acá al instante.</div>';
@@ -156,8 +156,10 @@ function renderAuditoria(){
    a.map(e=>`<tr><td>${e.seq}</td><td>${e.min??''}</td><td><b>${esc(e.tipo)}</b></td><td class="mono">${esc(JSON.stringify(e.datos).slice(0,150))}</td><td class="mono m">${e.prevHash.slice(0,6)}→${e.currentHash.slice(0,10)}</td></tr>`).join('')+'</table></div>';
 }
 function renderTransp(){
-  return `<div class="card"><b>Registro público de transparencia</b> <span class="m">qué se bloqueó, desde cuándo, hasta cuándo y por orden de quién</span><table><tr><th>Objetivo</th><th>Tipo</th><th>Proveedor</th><th>Estado</th><th>Desde</th><th>Hasta</th><th>Juez</th><th>Exp.</th></tr>`+
-   transp.map(t=>`<tr><td>${esc(t.objetivo)}</td><td>${esc(t.tipo)}</td><td>${esc(t.proveedor)}</td><td>${esc(t.estado)}</td><td>${t.aplicada_min??'–'}</td><td>${t.hasta_min}</td><td>${esc(t.juez)}</td><td>${esc(t.expediente)}</td></tr>`).join('')+'</table></div>';
+  const lista=Array.isArray(transp)?transp:(transp.ordenes||[]);
+  const hash=transp.hash_cabeza_ledger?`<span class="pill mono">ledger ${esc(transp.hash_cabeza_ledger.slice(0,16))}…</span>`:'';
+  return `<div class="card"><div class="row"><b>Registro público de transparencia</b> <span class="m">qué se bloqueó, desde cuándo, hasta cuándo y por orden de quién</span> ${hash}</div><table><tr><th>Objetivo</th><th>Tipo</th><th>Proveedor</th><th>Estado</th><th>Desde</th><th>Hasta</th><th>Juez</th><th>Exp.</th></tr>`+
+   lista.map(t=>`<tr><td>${esc(t.objetivo)}</td><td>${esc(t.tipo)}</td><td>${esc(t.proveedor)}</td><td>${esc(t.estado)}</td><td>${t.aplicada_min??'–'}</td><td>${t.hasta_min}</td><td>${esc(t.juez)}</td><td>${esc(t.expediente)}</td></tr>`).join('')+'</table></div>';
 }
 function render(){
   if(!snap)return;

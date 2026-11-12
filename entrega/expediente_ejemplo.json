@@ -30,7 +30,7 @@
     "partido_id": "practica-01",
     "deteccion_id": "D-0003",
     "minuto_deteccion": 6.0,
-    "timestamp_utc": "2026-11-12T19:52:30.296+00:00",
+    "timestamp_utc": "2026-11-12T21:38:45.854+00:00",
     "pagina": "https://golazo-libre.test/partido",
     "stream_url": "https://live.golazo-libre.test/hls/en-vivo/index.m3u8",
     "host_stream": "live.golazo-libre.test",
@@ -56,7 +56,7 @@
     },
     "dns_pasivo": {
       "consulta": "/dns-pasivo?ip=198.51.100.20",
-      "consultado_utc": "2026-11-12T19:52:30.296+00:00",
+      "consultado_utc": "2026-11-12T21:38:45.854+00:00",
       "estado_http": 200,
       "dominios": [
         "live.golazo-libre.test",
@@ -87,14 +87,14 @@
       }
     ]
   },
-  "evidence_hash": "9161fe03368aa41b62430bde9673a31fd2da2bc366ff458f7d04d687763bdd15",
+  "evidence_hash": "96d3f93b19ba64dbcd0ba510a5a7930cc8aef87b78115454520f0972ff0f0df9",
   "vence_min": 105,
   "minuto_deteccion": 6.0,
-  "creado_min": 6.14,
+  "creado_min": 6.075,
   "juez_asignado": "jueza-laura-ficticia",
   "firmante": "jueza-laura-ficticia",
-  "firmado_via": "AUTO_POLICY",
-  "firma_decision": "99d4af94e0f7b157ed21e3a135406a215d38cf5547c0003aee801f260c8b70a8",
+  "firmado_via": "MANUAL_ONE_CLICK",
+  "firma_decision": "fea3edf50a1f1125ac88b765a797e7fb21d2aee451707af253e70aabd2b82e6c",
   "ratificacion": false,
   "slots": [
     {
@@ -108,7 +108,7 @@
       "ordenes": [
         "EXP-2026-000002-aurora-d1"
       ],
-      "aplicada_min": 6.59
+      "aplicada_min": 6.698
     },
     {
       "key": "andina:dominio",
@@ -121,7 +121,7 @@
       "ordenes": [
         "EXP-2026-000002-andina-d1"
       ],
-      "aplicada_min": 8.17
+      "aplicada_min": 8.278
     },
     {
       "key": "valle:dominio",
@@ -134,7 +134,7 @@
       "ordenes": [
         "EXP-2026-000002-valle-d1"
       ],
-      "aplicada_min": 12.686
+      "aplicada_min": 12.781
     },
     {
       "key": "cumbre:dominio",
@@ -147,7 +147,7 @@
       "ordenes": [
         "EXP-2026-000002-cumbre-d1"
       ],
-      "aplicada_min": 9.515
+      "aplicada_min": 9.624
     }
   ],
   "hijos": [],
@@ -190,8 +190,9 @@
     }
   ],
   "actualizaciones": [],
-  "confirmado_todos_min": 12.686,
-  "sello_expediente": "fe3f9b5d5531dad33a1a36022ce54e9e85b324d65a767b1d1d2131870ef0e590",
+  "confirmado_todos_min": 12.781,
+  "sello_expediente": "5660745aa4f607e29e934388ca6d876add00ae6b6098de171a77e594d20049aa",
+  "decision": "aprobar",
   "ordenes_isp": [
     {
       "pid": "aurora",
@@ -199,7 +200,7 @@
       "tipo": "dominio",
       "objetivo": "live.golazo-libre.test",
       "estado": "vencida",
-      "aplicada_min": 6.59,
+      "aplicada_min": 6.698,
       "juez_id": "jueza-laura-ficticia"
     },
     {
@@ -208,7 +209,7 @@
       "tipo": "dominio",
       "objetivo": "live.golazo-libre.test",
       "estado": "vencida",
-      "aplicada_min": 8.17,
+      "aplicada_min": 8.278,
       "juez_id": "jueza-laura-ficticia"
     },
     {
@@ -217,7 +218,7 @@
       "tipo": "dominio",
       "objetivo": "live.golazo-libre.test",
       "estado": "vencida",
-      "aplicada_min": 9.515,
+      "aplicada_min": 9.624,
       "juez_id": "jueza-laura-ficticia"
     },
     {
@@ -226,7 +227,7 @@
       "tipo": "dominio",
       "objetivo": "live.golazo-libre.test",
       "estado": "vencida",
-      "aplicada_min": 12.686,
+      "aplicada_min": 12.781,
       "juez_id": "jueza-laura-ficticia"
     }
   ],
@@ -236,6 +237,6 @@
   },
   "metricas": {
     "minuto_deteccion": 6.0,
-    "minutos_hasta_confirmacion_en_todos_los_isp": 6.686
+    "minutos_hasta_confirmacion_en_todos_los_isp": 6.781
   }
 }

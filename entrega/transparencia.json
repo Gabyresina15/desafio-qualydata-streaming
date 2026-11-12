@@ -1,0 +1,564 @@
+{
+  "exportado_utc": "2026-11-12T21:40:29+00:00",
+  "motivo_exportacion": "ventana_cerrada",
+  "hash_cabeza_ledger": "6c652647146adf8c46854a0d04658a61c991abb10fbb4f5eebc85cab524f95cb",
+  "sello_ledger": {
+    "cabeza_sellada": "e77837a1dca4a591fcb4705dd054776e6cbf63ffe494279bacf56e6b1cac62ea",
+    "hash_sello": "6c652647146adf8c46854a0d04658a61c991abb10fbb4f5eebc85cab524f95cb",
+    "juez_id": "juez-martin-ejemplo",
+    "motivo": "ventana_cerrada",
+    "firma_ledger": "b66d1ca7d85deeee7d6927aceae4b890dafbc26e5ec8153909ca0c33de5d39e3"
+  },
+  "ordenes": [
+    {
+      "expediente": "EXP-2026-000001",
+      "proveedor": "aurora",
+      "tipo": "ip",
+      "objetivo": "203.0.113.10",
+      "estado": "vencida",
+      "aplicada_min": 2.71,
+      "hasta_min": 105,
+      "juez": "Dra. Laura Ficticia"
+    },
+    {
+      "expediente": "EXP-2026-000001",
+      "proveedor": "andina",
+      "tipo": "ip",
+      "objetivo": "203.0.113.10",
+      "estado": "vencida",
+      "aplicada_min": 4.055,
+      "hasta_min": 105,
+      "juez": "Dra. Laura Ficticia"
+    },
+    {
+      "expediente": "EXP-2026-000001",
+      "proveedor": "valle",
+      "tipo": "dominio",
+      "objetivo": "s1.pelotaya.test",
+      "estado": "vencida",
+      "aplicada_min": 7.821,
+      "hasta_min": 105,
+      "juez": "Dra. Laura Ficticia"
+    },
+    {
+      "expediente": "EXP-2026-000001",
+      "proveedor": "cumbre",
+      "tipo": "dominio",
+      "objetivo": "s1.pelotaya.test",
+      "estado": "vencida",
+      "aplicada_min": 5.767,
+      "hasta_min": 105,
+      "juez": "Dra. Laura Ficticia"
+    },
+    {
+      "expediente": "EXP-2026-000001",
+      "proveedor": "andina",
+      "tipo": "dominio",
+      "objetivo": "s1.pelotaya.test",
+      "estado": "vencida",
+      "aplicada_min": 4.767,
+      "hasta_min": 105,
+      "juez": "Dra. Laura Ficticia"
+    },
+    {
+      "expediente": "EXP-2026-000001",
+      "proveedor": "aurora",
+      "tipo": "dominio",
+      "objetivo": "s1.pelotaya.test",
+      "estado": "vencida",
+      "aplicada_min": 2.949,
+      "hasta_min": 105,
+      "juez": "Dra. Laura Ficticia"
+    },
+    {
+      "expediente": "EXP-2026-000001",
+      "proveedor": "cumbre",
+      "tipo": "ip",
+      "objetivo": "203.0.113.10",
+      "estado": "vencida",
+      "aplicada_min": 5.447,
+      "hasta_min": 105,
+      "juez": "Dra. Laura Ficticia"
+    },
+    {
+      "expediente": "EXP-2026-000002",
+      "proveedor": "aurora",
+      "tipo": "dominio",
+      "objetivo": "live.golazo-libre.test",
+      "estado": "vencida",
+      "aplicada_min": 6.698,
+      "hasta_min": 105,
+      "juez": "Dra. Laura Ficticia"
+    },
+    {
+      "expediente": "EXP-2026-000002",
+      "proveedor": "andina",
+      "tipo": "dominio",
+      "objetivo": "live.golazo-libre.test",
+      "estado": "vencida",
+      "aplicada_min": 8.278,
+      "hasta_min": 105,
+      "juez": "Dra. Laura Ficticia"
+    },
+    {
+      "expediente": "EXP-2026-000002",
+      "proveedor": "cumbre",
+      "tipo": "dominio",
+      "objetivo": "live.golazo-libre.test",
+      "estado": "vencida",
+      "aplicada_min": 9.624,
+      "hasta_min": 105,
+      "juez": "Dra. Laura Ficticia"
+    },
+    {
+      "expediente": "EXP-2026-000002",
+      "proveedor": "valle",
+      "tipo": "dominio",
+      "objetivo": "live.golazo-libre.test",
+      "estado": "vencida",
+      "aplicada_min": 12.781,
+      "hasta_min": 105,
+      "juez": "Dra. Laura Ficticia"
+    },
+    {
+      "expediente": "EXP-2026-000003",
+      "proveedor": "andina",
+      "tipo": "dominio",
+      "objetivo": "tv.verpartido-hd.test",
+      "estado": "vencida",
+      "aplicada_min": 11.04,
+      "hasta_min": 105,
+      "juez": "Dra. Laura Ficticia"
+    },
+    {
+      "expediente": "EXP-2026-000003",
+      "proveedor": "valle",
+      "tipo": "dominio",
+      "objetivo": "tv.verpartido-hd.test",
+      "estado": "vencida",
+      "aplicada_min": 14.661,
+      "hasta_min": 105,
+      "juez": "Dra. Laura Ficticia"
+    },
+    {
+      "expediente": "EXP-2026-000003",
+      "proveedor": "aurora",
+      "tipo": "dominio",
+      "objetivo": "tv.verpartido-hd.test",
+      "estado": "vencida",
+      "aplicada_min": 9.682,
+      "hasta_min": 105,
+      "juez": "Dra. Laura Ficticia"
+    },
+    {
+      "expediente": "EXP-2026-000003",
+      "proveedor": "cumbre",
+      "tipo": "dominio",
+      "objetivo": "tv.verpartido-hd.test",
+      "estado": "vencida",
+      "aplicada_min": 11.424,
+      "hasta_min": 105,
+      "juez": "Dra. Laura Ficticia"
+    },
+    {
+      "expediente": "EXP-2026-000004",
+      "proveedor": "aurora",
+      "tipo": "ip",
+      "objetivo": "203.0.113.11",
+      "estado": "vencida",
+      "aplicada_min": 38.379,
+      "hasta_min": 105,
+      "juez": "Dra. Laura Ficticia"
+    },
+    {
+      "expediente": "EXP-2026-000004",
+      "proveedor": "aurora",
+      "tipo": "dominio",
+      "objetivo": "s2.pelotaya.test",
+      "estado": "vencida",
+      "aplicada_min": 38.129,
+      "hasta_min": 105,
+      "juez": "Dra. Laura Ficticia"
+    },
+    {
+      "expediente": "EXP-2026-000004",
+      "proveedor": "andina",
+      "tipo": "dominio",
+      "objetivo": "s2.pelotaya.test",
+      "estado": "vencida",
+      "aplicada_min": 39.629,
+      "hasta_min": 105,
+      "juez": "Dra. Laura Ficticia"
+    },
+    {
+      "expediente": "EXP-2026-000004",
+      "proveedor": "cumbre",
+      "tipo": "ip",
+      "objetivo": "203.0.113.11",
+      "estado": "fallida",
+      "aplicada_min": null,
+      "hasta_min": 105,
+      "juez": "Dra. Laura Ficticia"
+    },
+    {
+      "expediente": "EXP-2026-000004",
+      "proveedor": "andina",
+      "tipo": "ip",
+      "objetivo": "203.0.113.11",
+      "estado": "vencida",
+      "aplicada_min": 40.023,
+      "hasta_min": 105,
+      "juez": "Dra. Laura Ficticia"
+    },
+    {
+      "expediente": "EXP-2026-000004",
+      "proveedor": "valle",
+      "tipo": "dominio",
+      "objetivo": "s2.pelotaya.test",
+      "estado": "vencida",
+      "aplicada_min": 43.56,
+      "hasta_min": 105,
+      "juez": "Dra. Laura Ficticia"
+    },
+    {
+      "expediente": "EXP-2026-000004",
+      "proveedor": "cumbre",
+      "tipo": "dominio",
+      "objetivo": "s2.pelotaya.test",
+      "estado": "fallida",
+      "aplicada_min": null,
+      "hasta_min": 105,
+      "juez": "Dra. Laura Ficticia"
+    },
+    {
+      "expediente": "EXP-2026-000004",
+      "proveedor": "cumbre",
+      "tipo": "dominio",
+      "objetivo": "s2.pelotaya.test",
+      "estado": "vencida",
+      "aplicada_min": 44.713,
+      "hasta_min": 105,
+      "juez": "Dra. Laura Ficticia"
+    },
+    {
+      "expediente": "EXP-2026-000004",
+      "proveedor": "cumbre",
+      "tipo": "ip",
+      "objetivo": "203.0.113.11",
+      "estado": "vencida",
+      "aplicada_min": 44.649,
+      "hasta_min": 105,
+      "juez": "Dra. Laura Ficticia"
+    },
+    {
+      "expediente": "EXP-2026-000004",
+      "proveedor": "cumbre",
+      "tipo": "dominio",
+      "objetivo": "s2.pelotaya.test",
+      "estado": "fallida",
+      "aplicada_min": null,
+      "hasta_min": 105,
+      "juez": "Dra. Laura Ficticia"
+    },
+    {
+      "expediente": "EXP-2026-000004",
+      "proveedor": "cumbre",
+      "tipo": "ip",
+      "objetivo": "203.0.113.11",
+      "estado": "fallida",
+      "aplicada_min": null,
+      "hasta_min": 105,
+      "juez": "Dra. Laura Ficticia"
+    },
+    {
+      "expediente": "EXP-2026-000005",
+      "proveedor": "aurora",
+      "tipo": "ip",
+      "objetivo": "203.0.113.40",
+      "estado": "vencida",
+      "aplicada_min": 55.681,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    },
+    {
+      "expediente": "EXP-2026-000005",
+      "proveedor": "aurora",
+      "tipo": "dominio",
+      "objetivo": "x9.tribuna-pirata.test",
+      "estado": "vencida",
+      "aplicada_min": 55.691,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    },
+    {
+      "expediente": "EXP-2026-000005",
+      "proveedor": "andina",
+      "tipo": "dominio",
+      "objetivo": "x9.tribuna-pirata.test",
+      "estado": "vencida",
+      "aplicada_min": 57.436,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    },
+    {
+      "expediente": "EXP-2026-000005",
+      "proveedor": "cumbre",
+      "tipo": "ip",
+      "objetivo": "203.0.113.40",
+      "estado": "fallida",
+      "aplicada_min": null,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    },
+    {
+      "expediente": "EXP-2026-000005",
+      "proveedor": "andina",
+      "tipo": "ip",
+      "objetivo": "203.0.113.40",
+      "estado": "vencida",
+      "aplicada_min": 57.575,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    },
+    {
+      "expediente": "EXP-2026-000005",
+      "proveedor": "cumbre",
+      "tipo": "dominio",
+      "objetivo": "x9.tribuna-pirata.test",
+      "estado": "fallida",
+      "aplicada_min": null,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    },
+    {
+      "expediente": "EXP-2026-000005",
+      "proveedor": "valle",
+      "tipo": "dominio",
+      "objetivo": "x9.tribuna-pirata.test",
+      "estado": "vencida",
+      "aplicada_min": 60.146,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    },
+    {
+      "expediente": "EXP-2026-000005",
+      "proveedor": "cumbre",
+      "tipo": "ip",
+      "objetivo": "203.0.113.40",
+      "estado": "vencida",
+      "aplicada_min": 57.919,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    },
+    {
+      "expediente": "EXP-2026-000005",
+      "proveedor": "cumbre",
+      "tipo": "dominio",
+      "objetivo": "x9.tribuna-pirata.test",
+      "estado": "vencida",
+      "aplicada_min": 58.09,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    },
+    {
+      "expediente": "EXP-2026-000006",
+      "proveedor": "aurora",
+      "tipo": "ip",
+      "objetivo": "198.51.100.77",
+      "estado": "vencida",
+      "aplicada_min": 71.559,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    },
+    {
+      "expediente": "EXP-2026-000006",
+      "proveedor": "aurora",
+      "tipo": "dominio",
+      "objetivo": "s3.pelotaya.test",
+      "estado": "vencida",
+      "aplicada_min": 71.725,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    },
+    {
+      "expediente": "EXP-2026-000006",
+      "proveedor": "valle",
+      "tipo": "dominio",
+      "objetivo": "s3.pelotaya.test",
+      "estado": "vencida",
+      "aplicada_min": 78.817,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    },
+    {
+      "expediente": "EXP-2026-000006",
+      "proveedor": "cumbre",
+      "tipo": "dominio",
+      "objetivo": "s3.pelotaya.test",
+      "estado": "fallida",
+      "aplicada_min": null,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    },
+    {
+      "expediente": "EXP-2026-000006",
+      "proveedor": "andina",
+      "tipo": "ip",
+      "objetivo": "198.51.100.77",
+      "estado": "vencida",
+      "aplicada_min": 73.193,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    },
+    {
+      "expediente": "EXP-2026-000006",
+      "proveedor": "andina",
+      "tipo": "dominio",
+      "objetivo": "s3.pelotaya.test",
+      "estado": "vencida",
+      "aplicada_min": 72.599,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    },
+    {
+      "expediente": "EXP-2026-000006",
+      "proveedor": "cumbre",
+      "tipo": "ip",
+      "objetivo": "198.51.100.77",
+      "estado": "fallida",
+      "aplicada_min": null,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    },
+    {
+      "expediente": "EXP-2026-000006",
+      "proveedor": "cumbre",
+      "tipo": "dominio",
+      "objetivo": "s3.pelotaya.test",
+      "estado": "fallida",
+      "aplicada_min": null,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    },
+    {
+      "expediente": "EXP-2026-000006",
+      "proveedor": "cumbre",
+      "tipo": "ip",
+      "objetivo": "198.51.100.77",
+      "estado": "vencida",
+      "aplicada_min": 74.397,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    },
+    {
+      "expediente": "EXP-2026-000006",
+      "proveedor": "cumbre",
+      "tipo": "dominio",
+      "objetivo": "s3.pelotaya.test",
+      "estado": "vencida",
+      "aplicada_min": 77.683,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    },
+    {
+      "expediente": "EXP-2026-000006",
+      "proveedor": "cumbre",
+      "tipo": "dominio",
+      "objetivo": "s3.pelotaya.test",
+      "estado": "fallida",
+      "aplicada_min": null,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    },
+    {
+      "expediente": "EXP-2026-000007",
+      "proveedor": "aurora",
+      "tipo": "ip",
+      "objetivo": "203.0.113.41",
+      "estado": "vencida",
+      "aplicada_min": 82.797,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    },
+    {
+      "expediente": "EXP-2026-000007",
+      "proveedor": "aurora",
+      "tipo": "dominio",
+      "objetivo": "x10.tribuna-pirata.test",
+      "estado": "vencida",
+      "aplicada_min": 82.754,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    },
+    {
+      "expediente": "EXP-2026-000007",
+      "proveedor": "andina",
+      "tipo": "dominio",
+      "objetivo": "x10.tribuna-pirata.test",
+      "estado": "vencida",
+      "aplicada_min": 84.125,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    },
+    {
+      "expediente": "EXP-2026-000007",
+      "proveedor": "valle",
+      "tipo": "dominio",
+      "objetivo": "x10.tribuna-pirata.test",
+      "estado": "vencida",
+      "aplicada_min": 89.488,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    },
+    {
+      "expediente": "EXP-2026-000007",
+      "proveedor": "andina",
+      "tipo": "ip",
+      "objetivo": "203.0.113.41",
+      "estado": "vencida",
+      "aplicada_min": 84.033,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    },
+    {
+      "expediente": "EXP-2026-000007",
+      "proveedor": "cumbre",
+      "tipo": "dominio",
+      "objetivo": "x10.tribuna-pirata.test",
+      "estado": "fallida",
+      "aplicada_min": null,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    },
+    {
+      "expediente": "EXP-2026-000007",
+      "proveedor": "cumbre",
+      "tipo": "ip",
+      "objetivo": "203.0.113.41",
+      "estado": "vencida",
+      "aplicada_min": 84.829,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    },
+    {
+      "expediente": "EXP-2026-000007",
+      "proveedor": "cumbre",
+      "tipo": "dominio",
+      "objetivo": "x10.tribuna-pirata.test",
+      "estado": "vencida",
+      "aplicada_min": 85.994,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    },
+    {
+      "expediente": "EXP-2026-000007",
+      "proveedor": "cumbre",
+      "tipo": "ip",
+      "objetivo": "203.0.113.41",
+      "estado": "vencida",
+      "aplicada_min": 85.746,
+      "hasta_min": 105,
+      "juez": "Dr. Martín Ejemplo"
+    }
+  ]
+}

@@ -152,7 +152,8 @@ class IntegracionTest(unittest.TestCase):
                 plat.ledger.archivo.close()
                 plat.pool.shutdown(wait=True)
 
-    def test_ui_y_auditoria_http(self):
+    def test_ui_autodespacho_bloqueado_y_transparencia(self):
+        import urllib.error
         import urllib.request
         with tempfile.TemporaryDirectory() as td:
             plat, _ = hacer_plat(Path(td))
@@ -167,6 +168,23 @@ class IntegracionTest(unittest.TestCase):
                 with urllib.request.urlopen(f"http://127.0.0.1:{port}/api/auditoria/verificar") as r:
                     data = json.loads(r.read())
                     self.assertTrue(data["integra"])
+
+                tk = plat.login("jueza-laura-ficticia", "laura-demo-2026")["token"]
+                req = urllib.request.Request(
+                    f"http://127.0.0.1:{port}/api/auto",
+                    data=b'{"activar":true}',
+                    headers={"Content-Type": "application/json", "Authorization": f"Bearer {tk}"},
+                )
+                with self.assertRaises(urllib.error.HTTPError) as ctx:
+                    urllib.request.urlopen(req)
+                self.assertEqual(ctx.exception.code, 403)
+
+                from escudo.exportar import exportar
+                exportar(plat, "test")
+                self.assertTrue((Path(td) / "ent" / "transparencia.json").exists())
+                with urllib.request.urlopen(f"http://127.0.0.1:{port}/api/transparencia") as r:
+                    tr = json.loads(r.read())
+                    self.assertIn("hash_cabeza_ledger", tr)
             finally:
                 srv.shutdown()
                 srv.server_close()

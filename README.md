@@ -44,14 +44,21 @@ Solución para el track **Datos y Streaming (Desafío Fútbol)** de **Hackathon 
    ```bash
    python main.py --simulador http://localhost:8080 --puerto 8090 --juzgados ../desafio-futbol/datos/juzgados.json
    ```
+   - Por defecto el autodespacho está **bloqueado** (`POST /api/auto` responde `403`): en el partido final **todas las órdenes se firman a mano desde la UI**.
+   - `--permitir-autodespacho`: habilita el interruptor de autodespacho únicamente para pruebas automatizadas o prácticas locales.
    - `--solo-ip-en-dedicadas`: opcional; en IPs dedicadas envía solo `ip` a ISPs compatibles (por defecto envía `ip` y `dominio`).
    - `--demo-forzar-ip`: solo para grabar la demo de reclamos en el video (fuerza 1 bloqueo por IP en una IP compartida para que el simulador dispare un reclamo real y mostrar el levantamiento firmado + reemplazo por dominio).
-3. **Abrir la UI del juez** en `http://localhost:8090` e ingresar con un usuario demo (`jueza-laura-ficticia` / `laura-demo-2026` o `juez-martin-ejemplo` / `martin-demo-2026`). La sesión se guarda por pestaña (`sessionStorage`), así que podés dejar abiertas dos pestañas simultáneas (una por cada juez de turno). En el partido final la aprobación se realiza desde la UI (un clic o tecla `Enter`, con notificación sonora y visual ante cada expediente o reclamo).
-   - *(Solo para pruebas automatizadas / práctica)*:
+3. **Abrir la UI del juez** en `http://localhost:8090` e ingresar con un usuario demo (`jueza-laura-ficticia` / `laura-demo-2026` o `juez-martin-ejemplo` / `martin-demo-2026`). La sesión se guarda por pestaña (`sessionStorage`), así que podés dejar abiertas dos pestañas simultáneas (una por cada juez de turno). En el partido final la aprobación se realiza **manualmente desde la UI** (un clic o tecla `Enter`, con notificación sonora y visual ante cada expediente o reclamo).
+   - *(Solo para pruebas automatizadas de práctica con `--permitir-autodespacho`)*:
      ```bash
      python herramientas/jueces_demo.py
      ```
-4. **Evaluar la corrida y la entrega**:
+4. **Correr los tests**:
+   ```bash
+   python tests/test_core.py
+   python tests/test_integracion.py
+   ```
+5. **Evaluar la corrida y la entrega** (exporta `expedientes.json`, `expediente_ejemplo.json`, `reclamos.json`, `auditoria.jsonl`, `auditoria_verificacion.json`, `transparencia.json`, `resumen.json` y `propuesta_normativa.md`):
    ```bash
    python evaluacion/verificar.py --log salida/registro.jsonl
    python herramientas/verificar_entrega.py entrega
