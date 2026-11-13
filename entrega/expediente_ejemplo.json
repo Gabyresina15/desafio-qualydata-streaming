@@ -8,226 +8,221 @@
     "block_type": "DOMAIN_ONLY",
     "riesgo_colateral": "ALTO",
     "dominios_ajenos": [
-      "tienda-mate-y-yerba.test",
-      "noticias-del-valle.test",
-      "turismo-cafayate.example",
-      "radio-comunitaria-fm.test",
-      "municipio-ejemplo.example",
-      "biblioteca-popular-norte.test",
-      "delivery-salta-ejemplo.test",
-      "clinica-veterinaria-sol.test",
-      "inmobiliaria-ejemplo.test",
-      "academia-de-ingles.test",
-      "feria-artesanal.example"
+      "diario-salteno-ejemplo.example",
+      "farmacia-central-ejemplo.test",
+      "bodega-valle-calchaqui.example",
+      "gimnasio-ejemplo.test",
+      "agencia-de-viajes-norte.test",
+      "colegio-san-ejemplo.test",
+      "tienda-de-ponchos.example",
+      "cooperativa-agua-ejemplo.test",
+      "hotel-plaza-ejemplo.test"
     ],
     "motivos": [
-      "La IP aloja 11 dominio(s) ajeno(s) al stream: tienda-mate-y-yerba.test, noticias-del-valle.test, turismo-cafayate.example, radio-comunitaria-fm.test…",
+      "La IP aloja 9 dominio(s) ajeno(s) al stream: diario-salteno-ejemplo.example, farmacia-central-ejemplo.test, bodega-valle-calchaqui.example, gimnasio-ejemplo.test…",
       "El ASN (NubeRápida CDN (ficticia)) es CDN u hosting compartido."
     ]
   },
   "evidencia": {
     "version": 1,
-    "partido_id": "practica-01",
+    "partido_id": "final-01",
     "deteccion_id": "D-0003",
-    "minuto_deteccion": 6.0,
-    "timestamp_utc": "2026-11-12T21:38:45.854+00:00",
-    "pagina": "https://golazo-libre.test/partido",
-    "stream_url": "https://live.golazo-libre.test/hls/en-vivo/index.m3u8",
-    "host_stream": "live.golazo-libre.test",
-    "ip_servidor": "198.51.100.20",
+    "minuto_deteccion": 4.0,
+    "timestamp_utc": "2026-11-13T14:11:26.905+00:00",
+    "pagina": "https://estadio-libre.test/ver",
+    "stream_url": "https://play.estadio-libre.test/hls/en-vivo/index.m3u8",
+    "host_stream": "play.estadio-libre.test",
+    "ip_servidor": "198.51.100.140",
     "asn": {
       "numero": 64610,
       "organizacion": "NubeRápida CDN (ficticia)"
     },
     "marca_de_agua": {
-      "extraida": "LP26-PRA-OFI-S077310",
-      "prefijo_oficial_coincidente": "LP26-PRA-OFI",
+      "extraida": "LP26-FIN-OFI-S055120",
+      "prefijo_oficial_coincidente": "LP26-FIN-OFI",
       "coincide_con_partido": true,
       "es_licenciatario": false
     },
     "captura": {
       "formato": "mpegts",
       "duracion_seg": 6,
-      "capturada_min": 6.0,
+      "capturada_min": 4.0,
       "bytes": 64,
       "decodifica_ok": true,
-      "sha256": "485b937379e696ae00920a738d03b3062ef615309dda5a10b2eb90a001f6665e",
-      "contenido_b64": "R0VCZSIFk8ZdS4KLyWGvZyBgTRG3Q/r7zN01hN4BLIEDSu1jEEsjRysDQA8huKd7Tc/NcICJPD9uel6f0LcElw=="
+      "sha256": "8c706aa5bb28a95aef2ec9d2c8e6902159d1cae74299cd60da75be2b77cb9fad",
+      "contenido_b64": "R+cu9zW8V/QLgc5KVPj3qFekFvQXZg/gsH+8/lIMcR+54dHwEZKuzh/RY4E4+LFGpGw2Ssxx/9iYl4dTCa6gZQ=="
     },
     "dns_pasivo": {
-      "consulta": "/dns-pasivo?ip=198.51.100.20",
-      "consultado_utc": "2026-11-12T21:38:45.854+00:00",
+      "consulta": "/dns-pasivo?ip=198.51.100.140",
+      "consultado_utc": "2026-11-13T14:11:26.905+00:00",
       "estado_http": 200,
       "dominios": [
-        "live.golazo-libre.test",
-        "tienda-mate-y-yerba.test",
-        "noticias-del-valle.test",
-        "turismo-cafayate.example",
-        "radio-comunitaria-fm.test",
-        "municipio-ejemplo.example",
-        "biblioteca-popular-norte.test",
-        "delivery-salta-ejemplo.test",
-        "clinica-veterinaria-sol.test",
-        "inmobiliaria-ejemplo.test",
-        "academia-de-ingles.test",
-        "feria-artesanal.example"
+        "play.estadio-libre.test",
+        "diario-salteno-ejemplo.example",
+        "farmacia-central-ejemplo.test",
+        "bodega-valle-calchaqui.example",
+        "gimnasio-ejemplo.test",
+        "agencia-de-viajes-norte.test",
+        "colegio-san-ejemplo.test",
+        "tienda-de-ponchos.example",
+        "cooperativa-agua-ejemplo.test",
+        "hotel-plaza-ejemplo.test"
       ],
       "asn": 64610
     },
     "promocion": [
       {
-        "red": "x",
-        "url": "https://x.example/golazolibre/status/2207",
-        "minuto": 4.0
-      },
-      {
         "red": "discord",
-        "url": "https://discord.example/invite/golazo-hoy",
-        "minuto": 5.0
+        "url": "https://discord.example/invite/estadio-libre",
+        "minuto": 2.0
       }
     ]
   },
-  "evidence_hash": "96d3f93b19ba64dbcd0ba510a5a7930cc8aef87b78115454520f0972ff0f0df9",
+  "evidence_hash": "0a4f1d3859c149a18ad4bfb46d9d03e4527b2715653065c562f46edeb8950303",
   "vence_min": 105,
-  "minuto_deteccion": 6.0,
-  "creado_min": 6.075,
+  "minuto_deteccion": 4.0,
+  "creado_min": 4.0,
   "juez_asignado": "jueza-laura-ficticia",
   "firmante": "jueza-laura-ficticia",
   "firmado_via": "MANUAL_ONE_CLICK",
-  "firma_decision": "fea3edf50a1f1125ac88b765a797e7fb21d2aee451707af253e70aabd2b82e6c",
+  "firma_decision": "a83f106a38943d9a59ecce3b2e9524ec387c1d0d452c7dc64b8734c61810e10a",
   "ratificacion": false,
   "slots": [
     {
       "key": "aurora:dominio",
       "pid": "aurora",
       "tipo": "dominio",
-      "objetivo": "live.golazo-libre.test",
+      "objetivo": "play.estadio-libre.test",
       "estado": "VENCIDO",
       "seq": 1,
       "reintentos": 0,
       "ordenes": [
         "EXP-2026-000002-aurora-d1"
       ],
-      "aplicada_min": 6.698
+      "aplicada_min": 8.216
     },
     {
       "key": "andina:dominio",
       "pid": "andina",
       "tipo": "dominio",
-      "objetivo": "live.golazo-libre.test",
+      "objetivo": "play.estadio-libre.test",
       "estado": "VENCIDO",
       "seq": 1,
       "reintentos": 0,
       "ordenes": [
         "EXP-2026-000002-andina-d1"
       ],
-      "aplicada_min": 8.278
+      "aplicada_min": 9.796
     },
     {
       "key": "valle:dominio",
       "pid": "valle",
       "tipo": "dominio",
-      "objetivo": "live.golazo-libre.test",
+      "objetivo": "play.estadio-libre.test",
       "estado": "VENCIDO",
       "seq": 1,
       "reintentos": 0,
       "ordenes": [
         "EXP-2026-000002-valle-d1"
       ],
-      "aplicada_min": 12.781
+      "aplicada_min": 14.298
     },
     {
       "key": "cumbre:dominio",
       "pid": "cumbre",
       "tipo": "dominio",
-      "objetivo": "live.golazo-libre.test",
+      "objetivo": "play.estadio-libre.test",
       "estado": "VENCIDO",
       "seq": 1,
       "reintentos": 0,
       "ordenes": [
         "EXP-2026-000002-cumbre-d1"
       ],
-      "aplicada_min": 9.624
+      "aplicada_min": 11.14
     }
   ],
   "hijos": [],
   "redetecciones": [
     {
       "deteccion_id": "D-0006",
-      "minuto": 16.0
+      "minuto": 14.0
     },
     {
       "deteccion_id": "D-0010",
-      "minuto": 26.0
+      "minuto": 24.0
     },
     {
-      "deteccion_id": "D-0013",
-      "minuto": 36.0
+      "deteccion_id": "D-0014",
+      "minuto": 34.0
     },
     {
-      "deteccion_id": "D-0017",
-      "minuto": 46.0
+      "deteccion_id": "D-0019",
+      "minuto": 44.0
     },
     {
-      "deteccion_id": "D-0022",
-      "minuto": 56.0
+      "deteccion_id": "D-0024",
+      "minuto": 54.0
     },
     {
-      "deteccion_id": "D-0026",
-      "minuto": 66.0
+      "deteccion_id": "D-0029",
+      "minuto": 64.0
     },
     {
-      "deteccion_id": "D-0031",
-      "minuto": 76.0
-    },
-    {
-      "deteccion_id": "D-0036",
-      "minuto": 86.0
+      "deteccion_id": "D-0034",
+      "minuto": 74.0
     },
     {
       "deteccion_id": "D-0040",
-      "minuto": 96.0
+      "minuto": 84.0
+    },
+    {
+      "deteccion_id": "D-0045",
+      "minuto": 94.0
+    },
+    {
+      "deteccion_id": "D-0050",
+      "minuto": 104.0
     }
   ],
   "actualizaciones": [],
-  "confirmado_todos_min": 12.781,
-  "sello_expediente": "5660745aa4f607e29e934388ca6d876add00ae6b6098de171a77e594d20049aa",
+  "confirmado_todos_min": 14.298,
+  "sello_expediente": "de0810d0e8bad8edf029f916a18a7cf4dfeaf10c44abc78c907d9b90e2e24d8a",
   "decision": "aprobar",
   "ordenes_isp": [
     {
       "pid": "aurora",
       "oid": "EXP-2026-000002-aurora-d1",
       "tipo": "dominio",
-      "objetivo": "live.golazo-libre.test",
+      "objetivo": "play.estadio-libre.test",
       "estado": "vencida",
-      "aplicada_min": 6.698,
-      "juez_id": "jueza-laura-ficticia"
-    },
-    {
-      "pid": "andina",
-      "oid": "EXP-2026-000002-andina-d1",
-      "tipo": "dominio",
-      "objetivo": "live.golazo-libre.test",
-      "estado": "vencida",
-      "aplicada_min": 8.278,
-      "juez_id": "jueza-laura-ficticia"
-    },
-    {
-      "pid": "cumbre",
-      "oid": "EXP-2026-000002-cumbre-d1",
-      "tipo": "dominio",
-      "objetivo": "live.golazo-libre.test",
-      "estado": "vencida",
-      "aplicada_min": 9.624,
+      "aplicada_min": 8.216,
       "juez_id": "jueza-laura-ficticia"
     },
     {
       "pid": "valle",
       "oid": "EXP-2026-000002-valle-d1",
       "tipo": "dominio",
-      "objetivo": "live.golazo-libre.test",
+      "objetivo": "play.estadio-libre.test",
       "estado": "vencida",
-      "aplicada_min": 12.781,
+      "aplicada_min": 14.298,
+      "juez_id": "jueza-laura-ficticia"
+    },
+    {
+      "pid": "andina",
+      "oid": "EXP-2026-000002-andina-d1",
+      "tipo": "dominio",
+      "objetivo": "play.estadio-libre.test",
+      "estado": "vencida",
+      "aplicada_min": 9.796,
+      "juez_id": "jueza-laura-ficticia"
+    },
+    {
+      "pid": "cumbre",
+      "oid": "EXP-2026-000002-cumbre-d1",
+      "tipo": "dominio",
+      "objetivo": "play.estadio-libre.test",
+      "estado": "vencida",
+      "aplicada_min": 11.14,
       "juez_id": "jueza-laura-ficticia"
     }
   ],
@@ -236,7 +231,7 @@
     "sello_integro": true
   },
   "metricas": {
-    "minuto_deteccion": 6.0,
-    "minutos_hasta_confirmacion_en_todos_los_isp": 6.781
+    "minuto_deteccion": 4.0,
+    "minutos_hasta_confirmacion_en_todos_los_isp": 10.298
   }
 }

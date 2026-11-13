@@ -1,16 +1,16 @@
 {
   "integra": true,
   "seq_corrupto": null,
-  "detalle": "cadena íntegra (284 entradas)",
-  "entradas": 284,
-  "hash_cabeza": "6c652647146adf8c46854a0d04658a61c991abb10fbb4f5eebc85cab524f95cb",
+  "detalle": "cadena íntegra (298 entradas)",
+  "entradas": 298,
+  "hash_cabeza": "491742c02598b16dae449333cbb6b15376eab518d25235f56a3f33069e8f5467",
   "sello_ledger": {
-    "cabeza_sellada": "e77837a1dca4a591fcb4705dd054776e6cbf63ffe494279bacf56e6b1cac62ea",
-    "hash_sello": "6c652647146adf8c46854a0d04658a61c991abb10fbb4f5eebc85cab524f95cb",
+    "cabeza_sellada": "88a8cd4aebee6c19f2e62d1176905096a9ab0986841cd1c7246d0d7828505e82",
+    "hash_sello": "491742c02598b16dae449333cbb6b15376eab518d25235f56a3f33069e8f5467",
     "juez_id": "juez-martin-ejemplo",
     "motivo": "ventana_cerrada",
-    "firma_ledger": "b66d1ca7d85deeee7d6927aceae4b890dafbc26e5ec8153909ca0c33de5d39e3"
+    "firma_ledger": "ae0037c474601e1bd9f20840e1aae7d8714ba4cb81e05c83250fb8c982657302"
   },
-  "exportado_utc": "2026-11-12T21:40:29+00:00",
+  "exportado_utc": "2026-11-13T14:46:46+00:00",
   "motivo_exportacion": "ventana_cerrada"
 }

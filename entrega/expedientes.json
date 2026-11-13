@@ -10,26 +10,26 @@
       "riesgo_colateral": "BAJO",
       "dominios_ajenos": [],
       "motivos": [
-        "La IP aloja solo el stream pirata (2 dominio/s del mismo operador): bloqueo por IP habilitado."
+        "La IP aloja solo el stream pirata (1 dominio/s del mismo operador): bloqueo por IP habilitado."
       ]
     },
     "evidencia": {
       "version": 1,
-      "partido_id": "practica-01",
+      "partido_id": "final-01",
       "deteccion_id": "D-0001",
       "minuto_deteccion": 2.0,
-      "timestamp_utc": "2026-11-12T21:38:41.906+00:00",
-      "pagina": "https://pelotaya.test/en-vivo",
-      "stream_url": "https://s1.pelotaya.test/hls/en-vivo/index.m3u8",
-      "host_stream": "s1.pelotaya.test",
-      "ip_servidor": "203.0.113.10",
+      "timestamp_utc": "2026-11-13T14:10:46.994+00:00",
+      "pagina": "https://futbolpasion.test/hoy",
+      "stream_url": "https://sa.futbolpasion.test/hls/en-vivo/index.m3u8",
+      "host_stream": "sa.futbolpasion.test",
+      "ip_servidor": "203.0.113.60",
       "asn": {
         "numero": 64600,
         "organizacion": "Bruma Hosting Dedicado (ficticio)"
       },
       "marca_de_agua": {
-        "extraida": "LP26-PRA-OFI-S048211",
-        "prefijo_oficial_coincidente": "LP26-PRA-OFI",
+        "extraida": "LP26-FIN-OFI-S020318",
+        "prefijo_oficial_coincidente": "LP26-FIN-OFI",
         "coincide_con_partido": true,
         "es_licenciatario": false
       },
@@ -39,226 +39,221 @@
         "capturada_min": 2.0,
         "bytes": 64,
         "decodifica_ok": true,
-        "sha256": "77b14ea8874ef8bbbf99cc292fd820a9e8df09fa4d4c00ebaeb9003e6b9bfbe1",
-        "contenido_b64": "R78wa6jDSwxuvnrbaeujx9QA6W2SWznDA23chX6X64YQcfhYYZSMMZwcKXGjb2FxD+oQxdoJxuAnpRn0QxEQ0Q=="
+        "sha256": "c60104faf76e511083ffea258f135c53fd3a8a0b6a6cba7f0353d605cc959ef8",
+        "contenido_b64": "R18/6D88JQm0lo57ver7rFnrlpw/eNqNP48IRdwapV9ZJo1xCej7YXnoG9KBysiBQPBS+D+rp2h93eDhrLUVsg=="
       },
       "dns_pasivo": {
-        "consulta": "/dns-pasivo?ip=203.0.113.10",
-        "consultado_utc": "2026-11-12T21:38:41.906+00:00",
+        "consulta": "/dns-pasivo?ip=203.0.113.60",
+        "consultado_utc": "2026-11-13T14:10:46.994+00:00",
         "estado_http": 200,
         "dominios": [
-          "s1.pelotaya.test",
-          "s1-respaldo.pelotaya.test"
+          "sa.futbolpasion.test"
         ],
         "asn": 64600
       },
       "promocion": [
         {
           "red": "x",
-          "url": "https://x.example/futbolya_ok/status/1001",
+          "url": "https://x.example/futbolpasion_ar/status/9001",
           "minuto": 1.0
         }
       ]
     },
-    "evidence_hash": "c0b753d0ee33c668a137669a8dd7a08f0883de53f5dd63970f4b139291c2b12f",
+    "evidence_hash": "8272fa358115a27b3bf5d6e91b0db836014ee1d95e79c2b8109e988b9aabe872",
     "vence_min": 105,
     "minuto_deteccion": 2.0,
-    "creado_min": 2.127,
+    "creado_min": 2.009,
     "juez_asignado": "jueza-laura-ficticia",
     "firmante": "jueza-laura-ficticia",
     "firmado_via": "MANUAL_ONE_CLICK",
-    "firma_decision": "cdb55a5139b97e7a373961100989f0259bf809a64b6027e1a31c72a3361eb96c",
+    "firma_decision": "eab38452ebd7f22c9a023bd822ae78ae39c25c204487eedcc4a02342e0b59901",
     "ratificacion": false,
     "slots": [
       {
         "key": "aurora:ip",
         "pid": "aurora",
         "tipo": "ip",
-        "objetivo": "203.0.113.10",
+        "objetivo": "203.0.113.60",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000001-aurora-i1"
         ],
-        "aplicada_min": 2.71
+        "aplicada_min": 7.874
       },
       {
         "key": "aurora:dominio",
         "pid": "aurora",
         "tipo": "dominio",
-        "objetivo": "s1.pelotaya.test",
+        "objetivo": "sa.futbolpasion.test",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000001-aurora-d1"
         ],
-        "aplicada_min": 2.949
+        "aplicada_min": 8.113
       },
       {
         "key": "andina:ip",
         "pid": "andina",
         "tipo": "ip",
-        "objetivo": "203.0.113.10",
+        "objetivo": "203.0.113.60",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000001-andina-i1"
         ],
-        "aplicada_min": 4.055
+        "aplicada_min": 9.221
       },
       {
         "key": "andina:dominio",
         "pid": "andina",
         "tipo": "dominio",
-        "objetivo": "s1.pelotaya.test",
+        "objetivo": "sa.futbolpasion.test",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000001-andina-d1"
         ],
-        "aplicada_min": 4.767
+        "aplicada_min": 9.931
       },
       {
         "key": "valle:dominio",
         "pid": "valle",
         "tipo": "dominio",
-        "objetivo": "s1.pelotaya.test",
+        "objetivo": "sa.futbolpasion.test",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000001-valle-d1"
         ],
-        "aplicada_min": 7.821
+        "aplicada_min": 12.986
       },
       {
         "key": "cumbre:ip",
         "pid": "cumbre",
         "tipo": "ip",
-        "objetivo": "203.0.113.10",
+        "objetivo": "203.0.113.60",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000001-cumbre-i1"
         ],
-        "aplicada_min": 5.447
+        "aplicada_min": 10.611
       },
       {
         "key": "cumbre:dominio",
         "pid": "cumbre",
         "tipo": "dominio",
-        "objetivo": "s1.pelotaya.test",
+        "objetivo": "sa.futbolpasion.test",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000001-cumbre-d1"
         ],
-        "aplicada_min": 5.767
+        "aplicada_min": 10.931
       }
     ],
     "hijos": [
       "EXP-2026-000004",
-      "EXP-2026-000006"
+      "EXP-2026-000005"
     ],
     "redetecciones": [
       {
-        "deteccion_id": "D-0005",
+        "deteccion_id": "D-0004",
         "minuto": 12.0
       },
       {
-        "deteccion_id": "D-0009",
+        "deteccion_id": "D-0008",
         "minuto": 22.0
-      },
-      {
-        "deteccion_id": "D-0012",
-        "minuto": 32.0
       }
     ],
     "actualizaciones": [
       {
         "tipo": "ROTACION_DE_SERVIDOR",
         "expediente": "EXP-2026-000004",
-        "nuevo_host": "s2.pelotaya.test",
-        "nueva_ip": "203.0.113.11"
+        "nuevo_host": "sb.futbolpasion.test",
+        "nueva_ip": "203.0.113.61"
       },
       {
         "tipo": "ROTACION_DE_SERVIDOR",
-        "expediente": "EXP-2026-000006",
-        "nuevo_host": "s3.pelotaya.test",
-        "nueva_ip": "198.51.100.77"
+        "expediente": "EXP-2026-000005",
+        "nuevo_host": "sc.futbolpasion.test",
+        "nueva_ip": "198.51.100.160"
       }
     ],
-    "confirmado_todos_min": 7.821,
-    "sello_expediente": "616a3155fd13ccfdea00f0ac4021c9f5e08fafe89a184ea68793dce61f4ad20e",
+    "confirmado_todos_min": 12.986,
+    "sello_expediente": "452ef8cf9c683083d95fbc4c5dbe34d8598c47ecfc149103415f25c7a09b9a4e",
     "decision": "aprobar",
     "ordenes_isp": [
       {
         "pid": "aurora",
         "oid": "EXP-2026-000001-aurora-i1",
         "tipo": "ip",
-        "objetivo": "203.0.113.10",
+        "objetivo": "203.0.113.60",
         "estado": "vencida",
-        "aplicada_min": 2.71,
+        "aplicada_min": 7.874,
         "juez_id": "jueza-laura-ficticia"
       },
       {
         "pid": "andina",
         "oid": "EXP-2026-000001-andina-i1",
         "tipo": "ip",
-        "objetivo": "203.0.113.10",
+        "objetivo": "203.0.113.60",
         "estado": "vencida",
-        "aplicada_min": 4.055,
+        "aplicada_min": 9.221,
         "juez_id": "jueza-laura-ficticia"
       },
       {
         "pid": "valle",
         "oid": "EXP-2026-000001-valle-d1",
         "tipo": "dominio",
-        "objetivo": "s1.pelotaya.test",
+        "objetivo": "sa.futbolpasion.test",
         "estado": "vencida",
-        "aplicada_min": 7.821,
+        "aplicada_min": 12.986,
         "juez_id": "jueza-laura-ficticia"
       },
       {
         "pid": "cumbre",
         "oid": "EXP-2026-000001-cumbre-d1",
         "tipo": "dominio",
-        "objetivo": "s1.pelotaya.test",
+        "objetivo": "sa.futbolpasion.test",
         "estado": "vencida",
-        "aplicada_min": 5.767,
+        "aplicada_min": 10.931,
         "juez_id": "jueza-laura-ficticia"
       },
       {
         "pid": "andina",
         "oid": "EXP-2026-000001-andina-d1",
         "tipo": "dominio",
-        "objetivo": "s1.pelotaya.test",
+        "objetivo": "sa.futbolpasion.test",
         "estado": "vencida",
-        "aplicada_min": 4.767,
+        "aplicada_min": 9.931,
         "juez_id": "jueza-laura-ficticia"
       },
       {
         "pid": "aurora",
         "oid": "EXP-2026-000001-aurora-d1",
         "tipo": "dominio",
-        "objetivo": "s1.pelotaya.test",
+        "objetivo": "sa.futbolpasion.test",
         "estado": "vencida",
-        "aplicada_min": 2.949,
+        "aplicada_min": 8.113,
         "juez_id": "jueza-laura-ficticia"
       },
       {
         "pid": "cumbre",
         "oid": "EXP-2026-000001-cumbre-i1",
         "tipo": "ip",
-        "objetivo": "203.0.113.10",
+        "objetivo": "203.0.113.60",
         "estado": "vencida",
-        "aplicada_min": 5.447,
+        "aplicada_min": 10.611,
         "juez_id": "jueza-laura-ficticia"
       }
     ],
@@ -268,7 +263,7 @@
     },
     "metricas": {
       "minuto_deteccion": 2.0,
-      "minutos_hasta_confirmacion_en_todos_los_isp": 5.821
+      "minutos_hasta_confirmacion_en_todos_los_isp": 10.986
     }
   },
   {
@@ -281,226 +276,221 @@
       "block_type": "DOMAIN_ONLY",
       "riesgo_colateral": "ALTO",
       "dominios_ajenos": [
-        "tienda-mate-y-yerba.test",
-        "noticias-del-valle.test",
-        "turismo-cafayate.example",
-        "radio-comunitaria-fm.test",
-        "municipio-ejemplo.example",
-        "biblioteca-popular-norte.test",
-        "delivery-salta-ejemplo.test",
-        "clinica-veterinaria-sol.test",
-        "inmobiliaria-ejemplo.test",
-        "academia-de-ingles.test",
-        "feria-artesanal.example"
+        "diario-salteno-ejemplo.example",
+        "farmacia-central-ejemplo.test",
+        "bodega-valle-calchaqui.example",
+        "gimnasio-ejemplo.test",
+        "agencia-de-viajes-norte.test",
+        "colegio-san-ejemplo.test",
+        "tienda-de-ponchos.example",
+        "cooperativa-agua-ejemplo.test",
+        "hotel-plaza-ejemplo.test"
       ],
       "motivos": [
-        "La IP aloja 11 dominio(s) ajeno(s) al stream: tienda-mate-y-yerba.test, noticias-del-valle.test, turismo-cafayate.example, radio-comunitaria-fm.test…",
+        "La IP aloja 9 dominio(s) ajeno(s) al stream: diario-salteno-ejemplo.example, farmacia-central-ejemplo.test, bodega-valle-calchaqui.example, gimnasio-ejemplo.test…",
         "El ASN (NubeRápida CDN (ficticia)) es CDN u hosting compartido."
       ]
     },
     "evidencia": {
       "version": 1,
-      "partido_id": "practica-01",
+      "partido_id": "final-01",
       "deteccion_id": "D-0003",
-      "minuto_deteccion": 6.0,
-      "timestamp_utc": "2026-11-12T21:38:45.854+00:00",
-      "pagina": "https://golazo-libre.test/partido",
-      "stream_url": "https://live.golazo-libre.test/hls/en-vivo/index.m3u8",
-      "host_stream": "live.golazo-libre.test",
-      "ip_servidor": "198.51.100.20",
+      "minuto_deteccion": 4.0,
+      "timestamp_utc": "2026-11-13T14:11:26.905+00:00",
+      "pagina": "https://estadio-libre.test/ver",
+      "stream_url": "https://play.estadio-libre.test/hls/en-vivo/index.m3u8",
+      "host_stream": "play.estadio-libre.test",
+      "ip_servidor": "198.51.100.140",
       "asn": {
         "numero": 64610,
         "organizacion": "NubeRápida CDN (ficticia)"
       },
       "marca_de_agua": {
-        "extraida": "LP26-PRA-OFI-S077310",
-        "prefijo_oficial_coincidente": "LP26-PRA-OFI",
+        "extraida": "LP26-FIN-OFI-S055120",
+        "prefijo_oficial_coincidente": "LP26-FIN-OFI",
         "coincide_con_partido": true,
         "es_licenciatario": false
       },
       "captura": {
         "formato": "mpegts",
         "duracion_seg": 6,
-        "capturada_min": 6.0,
+        "capturada_min": 4.0,
         "bytes": 64,
         "decodifica_ok": true,
-        "sha256": "485b937379e696ae00920a738d03b3062ef615309dda5a10b2eb90a001f6665e",
-        "contenido_b64": "R0VCZSIFk8ZdS4KLyWGvZyBgTRG3Q/r7zN01hN4BLIEDSu1jEEsjRysDQA8huKd7Tc/NcICJPD9uel6f0LcElw=="
+        "sha256": "8c706aa5bb28a95aef2ec9d2c8e6902159d1cae74299cd60da75be2b77cb9fad",
+        "contenido_b64": "R+cu9zW8V/QLgc5KVPj3qFekFvQXZg/gsH+8/lIMcR+54dHwEZKuzh/RY4E4+LFGpGw2Ssxx/9iYl4dTCa6gZQ=="
       },
       "dns_pasivo": {
-        "consulta": "/dns-pasivo?ip=198.51.100.20",
-        "consultado_utc": "2026-11-12T21:38:45.854+00:00",
+        "consulta": "/dns-pasivo?ip=198.51.100.140",
+        "consultado_utc": "2026-11-13T14:11:26.905+00:00",
         "estado_http": 200,
         "dominios": [
-          "live.golazo-libre.test",
-          "tienda-mate-y-yerba.test",
-          "noticias-del-valle.test",
-          "turismo-cafayate.example",
-          "radio-comunitaria-fm.test",
-          "municipio-ejemplo.example",
-          "biblioteca-popular-norte.test",
-          "delivery-salta-ejemplo.test",
-          "clinica-veterinaria-sol.test",
-          "inmobiliaria-ejemplo.test",
-          "academia-de-ingles.test",
-          "feria-artesanal.example"
+          "play.estadio-libre.test",
+          "diario-salteno-ejemplo.example",
+          "farmacia-central-ejemplo.test",
+          "bodega-valle-calchaqui.example",
+          "gimnasio-ejemplo.test",
+          "agencia-de-viajes-norte.test",
+          "colegio-san-ejemplo.test",
+          "tienda-de-ponchos.example",
+          "cooperativa-agua-ejemplo.test",
+          "hotel-plaza-ejemplo.test"
         ],
         "asn": 64610
       },
       "promocion": [
         {
-          "red": "x",
-          "url": "https://x.example/golazolibre/status/2207",
-          "minuto": 4.0
-        },
-        {
           "red": "discord",
-          "url": "https://discord.example/invite/golazo-hoy",
-          "minuto": 5.0
+          "url": "https://discord.example/invite/estadio-libre",
+          "minuto": 2.0
         }
       ]
     },
-    "evidence_hash": "96d3f93b19ba64dbcd0ba510a5a7930cc8aef87b78115454520f0972ff0f0df9",
+    "evidence_hash": "0a4f1d3859c149a18ad4bfb46d9d03e4527b2715653065c562f46edeb8950303",
     "vence_min": 105,
-    "minuto_deteccion": 6.0,
-    "creado_min": 6.075,
+    "minuto_deteccion": 4.0,
+    "creado_min": 4.0,
     "juez_asignado": "jueza-laura-ficticia",
     "firmante": "jueza-laura-ficticia",
     "firmado_via": "MANUAL_ONE_CLICK",
-    "firma_decision": "fea3edf50a1f1125ac88b765a797e7fb21d2aee451707af253e70aabd2b82e6c",
+    "firma_decision": "a83f106a38943d9a59ecce3b2e9524ec387c1d0d452c7dc64b8734c61810e10a",
     "ratificacion": false,
     "slots": [
       {
         "key": "aurora:dominio",
         "pid": "aurora",
         "tipo": "dominio",
-        "objetivo": "live.golazo-libre.test",
+        "objetivo": "play.estadio-libre.test",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000002-aurora-d1"
         ],
-        "aplicada_min": 6.698
+        "aplicada_min": 8.216
       },
       {
         "key": "andina:dominio",
         "pid": "andina",
         "tipo": "dominio",
-        "objetivo": "live.golazo-libre.test",
+        "objetivo": "play.estadio-libre.test",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000002-andina-d1"
         ],
-        "aplicada_min": 8.278
+        "aplicada_min": 9.796
       },
       {
         "key": "valle:dominio",
         "pid": "valle",
         "tipo": "dominio",
-        "objetivo": "live.golazo-libre.test",
+        "objetivo": "play.estadio-libre.test",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000002-valle-d1"
         ],
-        "aplicada_min": 12.781
+        "aplicada_min": 14.298
       },
       {
         "key": "cumbre:dominio",
         "pid": "cumbre",
         "tipo": "dominio",
-        "objetivo": "live.golazo-libre.test",
+        "objetivo": "play.estadio-libre.test",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000002-cumbre-d1"
         ],
-        "aplicada_min": 9.624
+        "aplicada_min": 11.14
       }
     ],
     "hijos": [],
     "redetecciones": [
       {
         "deteccion_id": "D-0006",
-        "minuto": 16.0
+        "minuto": 14.0
       },
       {
         "deteccion_id": "D-0010",
-        "minuto": 26.0
+        "minuto": 24.0
       },
       {
-        "deteccion_id": "D-0013",
-        "minuto": 36.0
+        "deteccion_id": "D-0014",
+        "minuto": 34.0
       },
       {
-        "deteccion_id": "D-0017",
-        "minuto": 46.0
+        "deteccion_id": "D-0019",
+        "minuto": 44.0
       },
       {
-        "deteccion_id": "D-0022",
-        "minuto": 56.0
+        "deteccion_id": "D-0024",
+        "minuto": 54.0
       },
       {
-        "deteccion_id": "D-0026",
-        "minuto": 66.0
+        "deteccion_id": "D-0029",
+        "minuto": 64.0
       },
       {
-        "deteccion_id": "D-0031",
-        "minuto": 76.0
-      },
-      {
-        "deteccion_id": "D-0036",
-        "minuto": 86.0
+        "deteccion_id": "D-0034",
+        "minuto": 74.0
       },
       {
         "deteccion_id": "D-0040",
-        "minuto": 96.0
+        "minuto": 84.0
+      },
+      {
+        "deteccion_id": "D-0045",
+        "minuto": 94.0
+      },
+      {
+        "deteccion_id": "D-0050",
+        "minuto": 104.0
       }
     ],
     "actualizaciones": [],
-    "confirmado_todos_min": 12.781,
-    "sello_expediente": "5660745aa4f607e29e934388ca6d876add00ae6b6098de171a77e594d20049aa",
+    "confirmado_todos_min": 14.298,
+    "sello_expediente": "de0810d0e8bad8edf029f916a18a7cf4dfeaf10c44abc78c907d9b90e2e24d8a",
     "decision": "aprobar",
     "ordenes_isp": [
       {
         "pid": "aurora",
         "oid": "EXP-2026-000002-aurora-d1",
         "tipo": "dominio",
-        "objetivo": "live.golazo-libre.test",
+        "objetivo": "play.estadio-libre.test",
         "estado": "vencida",
-        "aplicada_min": 6.698,
-        "juez_id": "jueza-laura-ficticia"
-      },
-      {
-        "pid": "andina",
-        "oid": "EXP-2026-000002-andina-d1",
-        "tipo": "dominio",
-        "objetivo": "live.golazo-libre.test",
-        "estado": "vencida",
-        "aplicada_min": 8.278,
-        "juez_id": "jueza-laura-ficticia"
-      },
-      {
-        "pid": "cumbre",
-        "oid": "EXP-2026-000002-cumbre-d1",
-        "tipo": "dominio",
-        "objetivo": "live.golazo-libre.test",
-        "estado": "vencida",
-        "aplicada_min": 9.624,
+        "aplicada_min": 8.216,
         "juez_id": "jueza-laura-ficticia"
       },
       {
         "pid": "valle",
         "oid": "EXP-2026-000002-valle-d1",
         "tipo": "dominio",
-        "objetivo": "live.golazo-libre.test",
+        "objetivo": "play.estadio-libre.test",
         "estado": "vencida",
-        "aplicada_min": 12.781,
+        "aplicada_min": 14.298,
+        "juez_id": "jueza-laura-ficticia"
+      },
+      {
+        "pid": "andina",
+        "oid": "EXP-2026-000002-andina-d1",
+        "tipo": "dominio",
+        "objetivo": "play.estadio-libre.test",
+        "estado": "vencida",
+        "aplicada_min": 9.796,
+        "juez_id": "jueza-laura-ficticia"
+      },
+      {
+        "pid": "cumbre",
+        "oid": "EXP-2026-000002-cumbre-d1",
+        "tipo": "dominio",
+        "objetivo": "play.estadio-libre.test",
+        "estado": "vencida",
+        "aplicada_min": 11.14,
         "juez_id": "jueza-laura-ficticia"
       }
     ],
@@ -509,8 +499,8 @@
       "sello_integro": true
     },
     "metricas": {
-      "minuto_deteccion": 6.0,
-      "minutos_hasta_confirmacion_en_todos_los_isp": 6.781
+      "minuto_deteccion": 4.0,
+      "minutos_hasta_confirmacion_en_todos_los_isp": 10.298
     }
   },
   {
@@ -523,208 +513,208 @@
       "block_type": "DOMAIN_ONLY",
       "riesgo_colateral": "ALTO",
       "dominios_ajenos": [
-        "panaderia-la-espiga.test",
-        "club-atletico-barrio-norte.test",
-        "escuela-tecnica-12.test",
-        "estudio-contable-ruiz.test"
+        "ferreteria-central.test",
+        "jardin-de-infantes-7.test",
+        "consultorio-odontologico-sur.test",
+        "coro-municipal-ejemplo.test"
       ],
       "motivos": [
-        "La IP aloja 4 dominio(s) ajeno(s) al stream: panaderia-la-espiga.test, club-atletico-barrio-norte.test, escuela-tecnica-12.test, estudio-contable-ruiz.test",
+        "La IP aloja 4 dominio(s) ajeno(s) al stream: ferreteria-central.test, jardin-de-infantes-7.test, consultorio-odontologico-sur.test, coro-municipal-ejemplo.test",
         "El ASN (Pampa Web Hosting Compartido (ficticio)) es CDN u hosting compartido."
       ]
     },
     "evidencia": {
       "version": 1,
-      "partido_id": "practica-01",
-      "deteccion_id": "D-0004",
-      "minuto_deteccion": 9.0,
-      "timestamp_utc": "2026-11-12T21:38:48.798+00:00",
-      "pagina": "https://verpartido-hd.test/vivo",
-      "stream_url": "https://tv.verpartido-hd.test/hls/en-vivo/index.m3u8",
-      "host_stream": "tv.verpartido-hd.test",
-      "ip_servidor": "192.0.2.50",
+      "partido_id": "final-01",
+      "deteccion_id": "D-0005",
+      "minuto_deteccion": 12.0,
+      "timestamp_utc": "2026-11-13T14:14:06.966+00:00",
+      "pagina": "https://mirapartido.test/en-vivo",
+      "stream_url": "https://hd.mirapartido.test/hls/en-vivo/index.m3u8",
+      "host_stream": "hd.mirapartido.test",
+      "ip_servidor": "192.0.2.120",
       "asn": {
         "numero": 64620,
         "organizacion": "Pampa Web Hosting Compartido (ficticio)"
       },
       "marca_de_agua": {
-        "extraida": "LP26-PRA-OFI-S010457",
-        "prefijo_oficial_coincidente": "LP26-PRA-OFI",
+        "extraida": "LP26-FIN-OFI-S031877",
+        "prefijo_oficial_coincidente": "LP26-FIN-OFI",
         "coincide_con_partido": true,
         "es_licenciatario": false
       },
       "captura": {
         "formato": "mpegts",
         "duracion_seg": 6,
-        "capturada_min": 9.0,
+        "capturada_min": 12.0,
         "bytes": 64,
         "decodifica_ok": true,
-        "sha256": "b3e5dd0f6977847eea9f86d67cc43e2d8b9aa378b92a131fa358e10db718b796",
-        "contenido_b64": "R5ZW+FE1lPhjsVnEzdSZpMGTL1DXtIcHUPzBRZNIaZJw1k2CN88xkIJmNZS0qrErH2zcZzzs5C6gOPr/mhziJg=="
+        "sha256": "1f6515d22d26597cad963315282859d85f9d1567c78acc802603b376c6889326",
+        "contenido_b64": "RxtT03w7p5TNI55koYU4zr9p42vn80kXs35EgBnP5xsk0e4hSiqCy2M8C6irBejX8J32DFbx2WhI1Qq+hJFb3g=="
       },
       "dns_pasivo": {
-        "consulta": "/dns-pasivo?ip=192.0.2.50",
-        "consultado_utc": "2026-11-12T21:38:48.798+00:00",
+        "consulta": "/dns-pasivo?ip=192.0.2.120",
+        "consultado_utc": "2026-11-13T14:14:06.966+00:00",
         "estado_http": 200,
         "dominios": [
-          "tv.verpartido-hd.test",
-          "verpartido-hd.test",
-          "panaderia-la-espiga.test",
-          "club-atletico-barrio-norte.test",
-          "escuela-tecnica-12.test",
-          "estudio-contable-ruiz.test"
+          "hd.mirapartido.test",
+          "mirapartido.test",
+          "ferreteria-central.test",
+          "jardin-de-infantes-7.test",
+          "consultorio-odontologico-sur.test",
+          "coro-municipal-ejemplo.test"
         ],
         "asn": 64620
       },
       "promocion": [
         {
           "red": "telegram",
-          "url": "https://t.example/verpartidohd",
-          "minuto": 7.0
+          "url": "https://t.example/mirapartido",
+          "minuto": 10.0
         }
       ]
     },
-    "evidence_hash": "6d3bcc446a3cca4ddc3c94ef3eaacfc706f251c1e475165f67f45b8091924698",
+    "evidence_hash": "5b00eba94fec6f0ee20d839f189a061d4036de2a4542081af6c4d711957475e5",
     "vence_min": 105,
-    "minuto_deteccion": 9.0,
-    "creado_min": 9.019,
+    "minuto_deteccion": 12.0,
+    "creado_min": 12.008,
     "juez_asignado": "jueza-laura-ficticia",
     "firmante": "jueza-laura-ficticia",
     "firmado_via": "MANUAL_ONE_CLICK",
-    "firma_decision": "e3e46d7e2d53d08ed885db62ff340e6b02ea0728f57a077e8cd24c83cf1f9b63",
+    "firma_decision": "f46acfe8d8185d6b4d98312d4e9763223b590ec09d414ed4eb2e04304e96197d",
     "ratificacion": false,
     "slots": [
       {
         "key": "aurora:dominio",
         "pid": "aurora",
         "tipo": "dominio",
-        "objetivo": "tv.verpartido-hd.test",
+        "objetivo": "hd.mirapartido.test",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000003-aurora-d1"
         ],
-        "aplicada_min": 9.682
+        "aplicada_min": 15.406
       },
       {
         "key": "andina:dominio",
         "pid": "andina",
         "tipo": "dominio",
-        "objetivo": "tv.verpartido-hd.test",
+        "objetivo": "hd.mirapartido.test",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000003-andina-d1"
         ],
-        "aplicada_min": 11.04
+        "aplicada_min": 16.764
       },
       {
         "key": "valle:dominio",
         "pid": "valle",
         "tipo": "dominio",
-        "objetivo": "tv.verpartido-hd.test",
+        "objetivo": "hd.mirapartido.test",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000003-valle-d1"
         ],
-        "aplicada_min": 14.661
+        "aplicada_min": 20.385
       },
       {
         "key": "cumbre:dominio",
         "pid": "cumbre",
         "tipo": "dominio",
-        "objetivo": "tv.verpartido-hd.test",
+        "objetivo": "hd.mirapartido.test",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000003-cumbre-d1"
         ],
-        "aplicada_min": 11.424
+        "aplicada_min": 17.146
       }
     ],
     "hijos": [],
     "redetecciones": [
       {
-        "deteccion_id": "D-0007",
-        "minuto": 19.0
+        "deteccion_id": "D-0009",
+        "minuto": 22.0
       },
       {
-        "deteccion_id": "D-0011",
-        "minuto": 29.0
+        "deteccion_id": "D-0013",
+        "minuto": 32.0
       },
       {
-        "deteccion_id": "D-0015",
-        "minuto": 39.0
+        "deteccion_id": "D-0017",
+        "minuto": 42.0
       },
       {
-        "deteccion_id": "D-0019",
-        "minuto": 49.0
-      },
-      {
-        "deteccion_id": "D-0024",
-        "minuto": 59.0
+        "deteccion_id": "D-0023",
+        "minuto": 52.0
       },
       {
         "deteccion_id": "D-0028",
-        "minuto": 69.0
+        "minuto": 62.0
       },
       {
-        "deteccion_id": "D-0032",
-        "minuto": 79.0
+        "deteccion_id": "D-0033",
+        "minuto": 72.0
       },
       {
-        "deteccion_id": "D-0037",
-        "minuto": 89.0
+        "deteccion_id": "D-0038",
+        "minuto": 82.0
       },
       {
-        "deteccion_id": "D-0041",
-        "minuto": 99.0
+        "deteccion_id": "D-0044",
+        "minuto": 92.0
+      },
+      {
+        "deteccion_id": "D-0049",
+        "minuto": 102.0
       }
     ],
     "actualizaciones": [],
-    "confirmado_todos_min": 14.661,
-    "sello_expediente": "c1f3037f8060b724f7121a2f73b1314052270a502e043b0f24984fcb4ea80b0e",
+    "confirmado_todos_min": 20.385,
+    "sello_expediente": "9ac2c7558b9c3a6690f647f54354c403b6ad887173e3aa870142d737b9393996",
     "decision": "aprobar",
     "ordenes_isp": [
-      {
-        "pid": "andina",
-        "oid": "EXP-2026-000003-andina-d1",
-        "tipo": "dominio",
-        "objetivo": "tv.verpartido-hd.test",
-        "estado": "vencida",
-        "aplicada_min": 11.04,
-        "juez_id": "jueza-laura-ficticia"
-      },
-      {
-        "pid": "valle",
-        "oid": "EXP-2026-000003-valle-d1",
-        "tipo": "dominio",
-        "objetivo": "tv.verpartido-hd.test",
-        "estado": "vencida",
-        "aplicada_min": 14.661,
-        "juez_id": "jueza-laura-ficticia"
-      },
       {
         "pid": "aurora",
         "oid": "EXP-2026-000003-aurora-d1",
         "tipo": "dominio",
-        "objetivo": "tv.verpartido-hd.test",
+        "objetivo": "hd.mirapartido.test",
         "estado": "vencida",
-        "aplicada_min": 9.682,
+        "aplicada_min": 15.406,
+        "juez_id": "jueza-laura-ficticia"
+      },
+      {
+        "pid": "andina",
+        "oid": "EXP-2026-000003-andina-d1",
+        "tipo": "dominio",
+        "objetivo": "hd.mirapartido.test",
+        "estado": "vencida",
+        "aplicada_min": 16.764,
         "juez_id": "jueza-laura-ficticia"
       },
       {
         "pid": "cumbre",
         "oid": "EXP-2026-000003-cumbre-d1",
         "tipo": "dominio",
-        "objetivo": "tv.verpartido-hd.test",
+        "objetivo": "hd.mirapartido.test",
         "estado": "vencida",
-        "aplicada_min": 11.424,
+        "aplicada_min": 17.146,
+        "juez_id": "jueza-laura-ficticia"
+      },
+      {
+        "pid": "valle",
+        "oid": "EXP-2026-000003-valle-d1",
+        "tipo": "dominio",
+        "objetivo": "hd.mirapartido.test",
+        "estado": "vencida",
+        "aplicada_min": 20.385,
         "juez_id": "jueza-laura-ficticia"
       }
     ],
@@ -733,8 +723,8 @@
       "sello_integro": true
     },
     "metricas": {
-      "minuto_deteccion": 9.0,
-      "minutos_hasta_confirmacion_en_todos_los_isp": 5.661
+      "minuto_deteccion": 12.0,
+      "minutos_hasta_confirmacion_en_todos_los_isp": 8.385
     }
   },
   {
@@ -748,135 +738,136 @@
       "riesgo_colateral": "BAJO",
       "dominios_ajenos": [],
       "motivos": [
-        "La IP aloja solo el stream pirata (1 dominio/s del mismo operador): bloqueo por IP habilitado."
+        "La IP aloja solo el stream pirata (2 dominio/s del mismo operador): bloqueo por IP habilitado."
       ]
     },
     "evidencia": {
       "version": 1,
-      "partido_id": "practica-01",
-      "deteccion_id": "D-0014",
-      "minuto_deteccion": 37.5,
-      "timestamp_utc": "2026-11-12T21:39:17.391+00:00",
-      "pagina": "https://pelotaya.test/en-vivo",
-      "stream_url": "https://s2.pelotaya.test/hls/en-vivo/index.m3u8",
-      "host_stream": "s2.pelotaya.test",
-      "ip_servidor": "203.0.113.11",
+      "partido_id": "final-01",
+      "deteccion_id": "D-0011",
+      "minuto_deteccion": 26.0,
+      "timestamp_utc": "2026-11-13T14:18:47.198+00:00",
+      "pagina": "https://futbolpasion.test/hoy",
+      "stream_url": "https://sb.futbolpasion.test/hls/en-vivo/index.m3u8",
+      "host_stream": "sb.futbolpasion.test",
+      "ip_servidor": "203.0.113.61",
       "asn": {
         "numero": 64600,
         "organizacion": "Bruma Hosting Dedicado (ficticio)"
       },
       "marca_de_agua": {
-        "extraida": "LP26-PRA-OFI-S048211",
-        "prefijo_oficial_coincidente": "LP26-PRA-OFI",
+        "extraida": "LP26-FIN-OFI-S020318",
+        "prefijo_oficial_coincidente": "LP26-FIN-OFI",
         "coincide_con_partido": true,
         "es_licenciatario": false
       },
       "captura": {
         "formato": "mpegts",
         "duracion_seg": 6,
-        "capturada_min": 37.5,
+        "capturada_min": 26.0,
         "bytes": 64,
         "decodifica_ok": true,
-        "sha256": "f27a4a5fba9cfc873c9750f4186c354c253b9dcb696de7b8c2bc789e0217ebe7",
-        "contenido_b64": "R4G2psD29qRNcRjBXhz26p6jlFAaX2qLfoxZdjZ8aQMen/BxHhgncoUUpHaWZIEYwwKXQ4GNJpILdyml+WJSAQ=="
+        "sha256": "825351ab4ef10e5aa12add229f4f8eb50e8d06091c77f4998d114282c076bdd6",
+        "contenido_b64": "R1XVTgwNd/v3CWEQdnYEMPVkVKX3mYtH1djYQAca6bk/VyFAI/zKEmZoq1UxMVbvDGAlf4aS0mS6BGDKUkxuEA=="
       },
       "dns_pasivo": {
-        "consulta": "/dns-pasivo?ip=203.0.113.11",
-        "consultado_utc": "2026-11-12T21:39:17.391+00:00",
+        "consulta": "/dns-pasivo?ip=203.0.113.61",
+        "consultado_utc": "2026-11-13T14:18:47.198+00:00",
         "estado_http": 200,
         "dominios": [
-          "s2.pelotaya.test"
+          "sb.futbolpasion.test",
+          "sb-alt.futbolpasion.test"
         ],
         "asn": 64600
       },
       "promocion": [
         {
           "red": "x",
-          "url": "https://x.example/futbolya_ok/status/1001",
+          "url": "https://x.example/futbolpasion_ar/status/9001",
           "minuto": 1.0
         }
       ]
     },
-    "evidence_hash": "d35020c84185049b31139a1c718338726785491caa445e0a9acbb169fb26ae2c",
+    "evidence_hash": "fcaad3b1842de1d217fcdf695337fe7e522dd81457151abd24318a263f89f48a",
     "vence_min": 105,
-    "minuto_deteccion": 37.5,
-    "creado_min": 37.608,
+    "minuto_deteccion": 26.0,
+    "creado_min": 26.013,
     "juez_asignado": "jueza-laura-ficticia",
     "firmante": "jueza-laura-ficticia",
     "firmado_via": "MANUAL_ONE_CLICK",
-    "firma_decision": "25e1378eeee3c3f51355093bc968fed68c329406b9a8ac479495aa9026ae32cd",
+    "firma_decision": "d79f8106ca612cb540e82e42053aec67d4f608937620d7e181284351361027da",
     "ratificacion": false,
     "slots": [
       {
         "key": "aurora:ip",
         "pid": "aurora",
         "tipo": "ip",
-        "objetivo": "203.0.113.11",
+        "objetivo": "203.0.113.61",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000004-aurora-i1"
         ],
-        "aplicada_min": 38.379
+        "aplicada_min": 29.329
       },
       {
         "key": "aurora:dominio",
         "pid": "aurora",
         "tipo": "dominio",
-        "objetivo": "s2.pelotaya.test",
+        "objetivo": "sb.futbolpasion.test",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000004-aurora-d1"
         ],
-        "aplicada_min": 38.129
+        "aplicada_min": 29.078
       },
       {
         "key": "andina:ip",
         "pid": "andina",
         "tipo": "ip",
-        "objetivo": "203.0.113.11",
+        "objetivo": "203.0.113.61",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000004-andina-i1"
         ],
-        "aplicada_min": 40.023
+        "aplicada_min": 30.971
       },
       {
         "key": "andina:dominio",
         "pid": "andina",
         "tipo": "dominio",
-        "objetivo": "s2.pelotaya.test",
+        "objetivo": "sb.futbolpasion.test",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000004-andina-d1"
         ],
-        "aplicada_min": 39.629
+        "aplicada_min": 30.578
       },
       {
         "key": "valle:dominio",
         "pid": "valle",
         "tipo": "dominio",
-        "objetivo": "s2.pelotaya.test",
+        "objetivo": "sb.futbolpasion.test",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000004-valle-d1"
         ],
-        "aplicada_min": 43.56
+        "aplicada_min": 34.508
       },
       {
         "key": "cumbre:ip",
         "pid": "cumbre",
         "tipo": "ip",
-        "objetivo": "203.0.113.11",
+        "objetivo": "203.0.113.61",
         "estado": "VENCIDO",
         "seq": 3,
         "reintentos": 1,
@@ -885,13 +876,13 @@
           "EXP-2026-000004-cumbre-i2",
           "EXP-2026-000004-cumbre-i3"
         ],
-        "aplicada_min": 44.649
+        "aplicada_min": 35.286
       },
       {
         "key": "cumbre:dominio",
         "pid": "cumbre",
         "tipo": "dominio",
-        "objetivo": "s2.pelotaya.test",
+        "objetivo": "sb.futbolpasion.test",
         "estado": "VENCIDO",
         "seq": 3,
         "reintentos": 1,
@@ -900,88 +891,106 @@
           "EXP-2026-000004-cumbre-d2",
           "EXP-2026-000004-cumbre-d3"
         ],
-        "aplicada_min": 44.713
+        "aplicada_min": 35.426
       }
     ],
     "hijos": [],
     "redetecciones": [
       {
-        "deteccion_id": "D-0018",
-        "minuto": 47.5
+        "deteccion_id": "D-0015",
+        "minuto": 36.0
       },
       {
-        "deteccion_id": "D-0023",
-        "minuto": 57.5
+        "deteccion_id": "D-0021",
+        "minuto": 46.0
       },
       {
-        "deteccion_id": "D-0027",
-        "minuto": 67.5
+        "deteccion_id": "D-0025",
+        "minuto": 56.0
       }
     ],
     "actualizaciones": [],
-    "confirmado_todos_min": 44.713,
-    "sello_expediente": "d3b437d7043a67fc94f7bc5685ae4cd5f48c89fe228bfbb3c5d03aa7a31f59df",
+    "confirmado_todos_min": 35.426,
+    "sello_expediente": "881a61944b47fe823214779cc3c97fbb6ee946639d0ca7596a2cf657fb194bb5",
     "decision": "aprobar",
     "ordenes_isp": [
       {
         "pid": "aurora",
         "oid": "EXP-2026-000004-aurora-i1",
         "tipo": "ip",
-        "objetivo": "203.0.113.11",
+        "objetivo": "203.0.113.61",
         "estado": "vencida",
-        "aplicada_min": 38.379,
-        "juez_id": "jueza-laura-ficticia"
-      },
-      {
-        "pid": "aurora",
-        "oid": "EXP-2026-000004-aurora-d1",
-        "tipo": "dominio",
-        "objetivo": "s2.pelotaya.test",
-        "estado": "vencida",
-        "aplicada_min": 38.129,
-        "juez_id": "jueza-laura-ficticia"
-      },
-      {
-        "pid": "andina",
-        "oid": "EXP-2026-000004-andina-d1",
-        "tipo": "dominio",
-        "objetivo": "s2.pelotaya.test",
-        "estado": "vencida",
-        "aplicada_min": 39.629,
-        "juez_id": "jueza-laura-ficticia"
-      },
-      {
-        "pid": "cumbre",
-        "oid": "EXP-2026-000004-cumbre-i1",
-        "tipo": "ip",
-        "objetivo": "203.0.113.11",
-        "estado": "fallida",
-        "aplicada_min": null,
+        "aplicada_min": 29.329,
         "juez_id": "jueza-laura-ficticia"
       },
       {
         "pid": "andina",
         "oid": "EXP-2026-000004-andina-i1",
         "tipo": "ip",
-        "objetivo": "203.0.113.11",
+        "objetivo": "203.0.113.61",
         "estado": "vencida",
-        "aplicada_min": 40.023,
+        "aplicada_min": 30.971,
         "juez_id": "jueza-laura-ficticia"
       },
       {
-        "pid": "valle",
-        "oid": "EXP-2026-000004-valle-d1",
+        "pid": "andina",
+        "oid": "EXP-2026-000004-andina-d1",
         "tipo": "dominio",
-        "objetivo": "s2.pelotaya.test",
+        "objetivo": "sb.futbolpasion.test",
         "estado": "vencida",
-        "aplicada_min": 43.56,
+        "aplicada_min": 30.578,
         "juez_id": "jueza-laura-ficticia"
       },
       {
         "pid": "cumbre",
         "oid": "EXP-2026-000004-cumbre-d1",
         "tipo": "dominio",
-        "objetivo": "s2.pelotaya.test",
+        "objetivo": "sb.futbolpasion.test",
+        "estado": "fallida",
+        "aplicada_min": null,
+        "juez_id": "jueza-laura-ficticia"
+      },
+      {
+        "pid": "valle",
+        "oid": "EXP-2026-000004-valle-d1",
+        "tipo": "dominio",
+        "objetivo": "sb.futbolpasion.test",
+        "estado": "vencida",
+        "aplicada_min": 34.508,
+        "juez_id": "jueza-laura-ficticia"
+      },
+      {
+        "pid": "aurora",
+        "oid": "EXP-2026-000004-aurora-d1",
+        "tipo": "dominio",
+        "objetivo": "sb.futbolpasion.test",
+        "estado": "vencida",
+        "aplicada_min": 29.078,
+        "juez_id": "jueza-laura-ficticia"
+      },
+      {
+        "pid": "cumbre",
+        "oid": "EXP-2026-000004-cumbre-i1",
+        "tipo": "ip",
+        "objetivo": "203.0.113.61",
+        "estado": "fallida",
+        "aplicada_min": null,
+        "juez_id": "jueza-laura-ficticia"
+      },
+      {
+        "pid": "cumbre",
+        "oid": "EXP-2026-000004-cumbre-i2",
+        "tipo": "ip",
+        "objetivo": "203.0.113.61",
+        "estado": "vencida",
+        "aplicada_min": 35.286,
+        "juez_id": "jueza-laura-ficticia"
+      },
+      {
+        "pid": "cumbre",
+        "oid": "EXP-2026-000004-cumbre-i3",
+        "tipo": "ip",
+        "objetivo": "203.0.113.61",
         "estado": "fallida",
         "aplicada_min": null,
         "juez_id": "jueza-laura-ficticia"
@@ -990,34 +999,16 @@
         "pid": "cumbre",
         "oid": "EXP-2026-000004-cumbre-d2",
         "tipo": "dominio",
-        "objetivo": "s2.pelotaya.test",
+        "objetivo": "sb.futbolpasion.test",
         "estado": "vencida",
-        "aplicada_min": 44.713,
-        "juez_id": "jueza-laura-ficticia"
-      },
-      {
-        "pid": "cumbre",
-        "oid": "EXP-2026-000004-cumbre-i2",
-        "tipo": "ip",
-        "objetivo": "203.0.113.11",
-        "estado": "vencida",
-        "aplicada_min": 44.649,
+        "aplicada_min": 35.426,
         "juez_id": "jueza-laura-ficticia"
       },
       {
         "pid": "cumbre",
         "oid": "EXP-2026-000004-cumbre-d3",
         "tipo": "dominio",
-        "objetivo": "s2.pelotaya.test",
-        "estado": "fallida",
-        "aplicada_min": null,
-        "juez_id": "jueza-laura-ficticia"
-      },
-      {
-        "pid": "cumbre",
-        "oid": "EXP-2026-000004-cumbre-i3",
-        "tipo": "ip",
-        "objetivo": "203.0.113.11",
+        "objetivo": "sb.futbolpasion.test",
         "estado": "fallida",
         "aplicada_min": null,
         "juez_id": "jueza-laura-ficticia"
@@ -1028,12 +1019,291 @@
       "sello_integro": true
     },
     "metricas": {
-      "minuto_deteccion": 37.5,
-      "minutos_hasta_confirmacion_en_todos_los_isp": 7.213
+      "minuto_deteccion": 26.0,
+      "minutos_hasta_confirmacion_en_todos_los_isp": 9.426
     }
   },
   {
     "id": "EXP-2026-000005",
+    "tipo": "ACTUALIZACION_ROTACION",
+    "parent_id": "EXP-2026-000001",
+    "estado": "EXPIRED",
+    "block_type": "IP_AND_DOMAIN",
+    "analisis_colateral": {
+      "block_type": "IP_AND_DOMAIN",
+      "riesgo_colateral": "BAJO",
+      "dominios_ajenos": [],
+      "motivos": [
+        "La IP aloja solo el stream pirata (1 dominio/s del mismo operador): bloqueo por IP habilitado."
+      ]
+    },
+    "evidencia": {
+      "version": 1,
+      "partido_id": "final-01",
+      "deteccion_id": "D-0026",
+      "minuto_deteccion": 59.0,
+      "timestamp_utc": "2026-11-13T14:29:47.526+00:00",
+      "pagina": "https://futbolpasion.test/hoy",
+      "stream_url": "https://sc.futbolpasion.test/hls/en-vivo/index.m3u8",
+      "host_stream": "sc.futbolpasion.test",
+      "ip_servidor": "198.51.100.160",
+      "asn": {
+        "numero": 64630,
+        "organizacion": "Servidores Litoral (ficticio)"
+      },
+      "marca_de_agua": {
+        "extraida": "LP26-FIN-OFI-S020318",
+        "prefijo_oficial_coincidente": "LP26-FIN-OFI",
+        "coincide_con_partido": true,
+        "es_licenciatario": false
+      },
+      "captura": {
+        "formato": "mpegts",
+        "duracion_seg": 6,
+        "capturada_min": 59.0,
+        "bytes": 64,
+        "decodifica_ok": true,
+        "sha256": "bd76872e48cdb6a12493be0263795f62a1c316df11b1d2a443a41a01b5bace5e",
+        "contenido_b64": "R7Ts0SI7SBYAYAx3puXQF1aHFV4xNYzqUP7HF2T3m2j5hWnGJM4XbsG+8cwzbGpXLVXor4SEGeAgBkFmbDBDag=="
+      },
+      "dns_pasivo": {
+        "consulta": "/dns-pasivo?ip=198.51.100.160",
+        "consultado_utc": "2026-11-13T14:29:47.526+00:00",
+        "estado_http": 200,
+        "dominios": [
+          "sc.futbolpasion.test"
+        ],
+        "asn": 64630
+      },
+      "promocion": [
+        {
+          "red": "x",
+          "url": "https://x.example/futbolpasion_ar/status/9001",
+          "minuto": 1.0
+        }
+      ]
+    },
+    "evidence_hash": "10e061f1c022d8232ce777f897ee2e22cdbaa46525f319e0df7bdf2de199a169",
+    "vence_min": 105,
+    "minuto_deteccion": 59.0,
+    "creado_min": 59.034,
+    "juez_asignado": "juez-martin-ejemplo",
+    "firmante": "juez-martin-ejemplo",
+    "firmado_via": "MANUAL_ONE_CLICK",
+    "firma_decision": "db1016061765aa83f01463514dd9ca7a23b8d2744cc25b382b76083cf1b1cbcb",
+    "ratificacion": false,
+    "slots": [
+      {
+        "key": "aurora:ip",
+        "pid": "aurora",
+        "tipo": "ip",
+        "objetivo": "198.51.100.160",
+        "estado": "VENCIDO",
+        "seq": 1,
+        "reintentos": 0,
+        "ordenes": [
+          "EXP-2026-000005-aurora-i1"
+        ],
+        "aplicada_min": 69.74
+      },
+      {
+        "key": "aurora:dominio",
+        "pid": "aurora",
+        "tipo": "dominio",
+        "objetivo": "sc.futbolpasion.test",
+        "estado": "VENCIDO",
+        "seq": 1,
+        "reintentos": 0,
+        "ordenes": [
+          "EXP-2026-000005-aurora-d1"
+        ],
+        "aplicada_min": 69.748
+      },
+      {
+        "key": "andina:ip",
+        "pid": "andina",
+        "tipo": "ip",
+        "objetivo": "198.51.100.160",
+        "estado": "VENCIDO",
+        "seq": 1,
+        "reintentos": 0,
+        "ordenes": [
+          "EXP-2026-000005-andina-i1"
+        ],
+        "aplicada_min": 71.632
+      },
+      {
+        "key": "andina:dominio",
+        "pid": "andina",
+        "tipo": "dominio",
+        "objetivo": "sc.futbolpasion.test",
+        "estado": "VENCIDO",
+        "seq": 1,
+        "reintentos": 0,
+        "ordenes": [
+          "EXP-2026-000005-andina-d1"
+        ],
+        "aplicada_min": 71.493
+      },
+      {
+        "key": "valle:dominio",
+        "pid": "valle",
+        "tipo": "dominio",
+        "objetivo": "sc.futbolpasion.test",
+        "estado": "VENCIDO",
+        "seq": 1,
+        "reintentos": 0,
+        "ordenes": [
+          "EXP-2026-000005-valle-d1"
+        ],
+        "aplicada_min": 74.201
+      },
+      {
+        "key": "cumbre:ip",
+        "pid": "cumbre",
+        "tipo": "ip",
+        "objetivo": "198.51.100.160",
+        "estado": "VENCIDO",
+        "seq": 2,
+        "reintentos": 0,
+        "ordenes": [
+          "EXP-2026-000005-cumbre-i1",
+          "EXP-2026-000005-cumbre-i2"
+        ],
+        "aplicada_min": 72.006
+      },
+      {
+        "key": "cumbre:dominio",
+        "pid": "cumbre",
+        "tipo": "dominio",
+        "objetivo": "sc.futbolpasion.test",
+        "estado": "VENCIDO",
+        "seq": 2,
+        "reintentos": 0,
+        "ordenes": [
+          "EXP-2026-000005-cumbre-d1",
+          "EXP-2026-000005-cumbre-d2"
+        ],
+        "aplicada_min": 72.176
+      }
+    ],
+    "hijos": [],
+    "redetecciones": [
+      {
+        "deteccion_id": "D-0030",
+        "minuto": 69.0
+      },
+      {
+        "deteccion_id": "D-0035",
+        "minuto": 79.0
+      },
+      {
+        "deteccion_id": "D-0042",
+        "minuto": 89.0
+      },
+      {
+        "deteccion_id": "D-0047",
+        "minuto": 99.0
+      }
+    ],
+    "actualizaciones": [],
+    "confirmado_todos_min": 74.201,
+    "sello_expediente": "de4d2ecca06b58a74868589b2d8ef09488d2cf3f664547f14170df204c29dc2c",
+    "decision": "aprobar",
+    "ordenes_isp": [
+      {
+        "pid": "aurora",
+        "oid": "EXP-2026-000005-aurora-i1",
+        "tipo": "ip",
+        "objetivo": "198.51.100.160",
+        "estado": "vencida",
+        "aplicada_min": 69.74,
+        "juez_id": "juez-martin-ejemplo"
+      },
+      {
+        "pid": "aurora",
+        "oid": "EXP-2026-000005-aurora-d1",
+        "tipo": "dominio",
+        "objetivo": "sc.futbolpasion.test",
+        "estado": "vencida",
+        "aplicada_min": 69.748,
+        "juez_id": "juez-martin-ejemplo"
+      },
+      {
+        "pid": "andina",
+        "oid": "EXP-2026-000005-andina-d1",
+        "tipo": "dominio",
+        "objetivo": "sc.futbolpasion.test",
+        "estado": "vencida",
+        "aplicada_min": 71.493,
+        "juez_id": "juez-martin-ejemplo"
+      },
+      {
+        "pid": "cumbre",
+        "oid": "EXP-2026-000005-cumbre-i1",
+        "tipo": "ip",
+        "objetivo": "198.51.100.160",
+        "estado": "fallida",
+        "aplicada_min": null,
+        "juez_id": "juez-martin-ejemplo"
+      },
+      {
+        "pid": "andina",
+        "oid": "EXP-2026-000005-andina-i1",
+        "tipo": "ip",
+        "objetivo": "198.51.100.160",
+        "estado": "vencida",
+        "aplicada_min": 71.632,
+        "juez_id": "juez-martin-ejemplo"
+      },
+      {
+        "pid": "cumbre",
+        "oid": "EXP-2026-000005-cumbre-d1",
+        "tipo": "dominio",
+        "objetivo": "sc.futbolpasion.test",
+        "estado": "fallida",
+        "aplicada_min": null,
+        "juez_id": "juez-martin-ejemplo"
+      },
+      {
+        "pid": "valle",
+        "oid": "EXP-2026-000005-valle-d1",
+        "tipo": "dominio",
+        "objetivo": "sc.futbolpasion.test",
+        "estado": "vencida",
+        "aplicada_min": 74.201,
+        "juez_id": "juez-martin-ejemplo"
+      },
+      {
+        "pid": "cumbre",
+        "oid": "EXP-2026-000005-cumbre-d2",
+        "tipo": "dominio",
+        "objetivo": "sc.futbolpasion.test",
+        "estado": "vencida",
+        "aplicada_min": 72.176,
+        "juez_id": "juez-martin-ejemplo"
+      },
+      {
+        "pid": "cumbre",
+        "oid": "EXP-2026-000005-cumbre-i2",
+        "tipo": "ip",
+        "objetivo": "198.51.100.160",
+        "estado": "vencida",
+        "aplicada_min": 72.006,
+        "juez_id": "juez-martin-ejemplo"
+      }
+    ],
+    "verificacion_integridad": {
+      "evidencia_integra": true,
+      "sello_integro": true
+    },
+    "metricas": {
+      "minuto_deteccion": 59.0,
+      "minutos_hasta_confirmacion_en_todos_los_isp": 15.201
+    }
+  },
+  {
+    "id": "EXP-2026-000006",
     "tipo": "ORIGINAL",
     "parent_id": null,
     "estado": "EXPIRED",
@@ -1048,416 +1318,135 @@
     },
     "evidencia": {
       "version": 1,
-      "partido_id": "practica-01",
-      "deteccion_id": "D-0021",
-      "minuto_deteccion": 55.0,
-      "timestamp_utc": "2026-11-12T21:39:34.853+00:00",
-      "pagina": "https://tribuna-pirata.test/ver",
-      "stream_url": "https://x9.tribuna-pirata.test/hls/en-vivo/index.m3u8",
-      "host_stream": "x9.tribuna-pirata.test",
-      "ip_servidor": "203.0.113.40",
+      "partido_id": "final-01",
+      "deteccion_id": "D-0031",
+      "minuto_deteccion": 70.0,
+      "timestamp_utc": "2026-11-13T14:33:27.348+00:00",
+      "pagina": "https://canalpirata-hd.test/vip",
+      "stream_url": "https://a1.canalpirata-hd.test/hls/en-vivo/index.m3u8",
+      "host_stream": "a1.canalpirata-hd.test",
+      "ip_servidor": "203.0.113.95",
       "asn": {
         "numero": 64600,
         "organizacion": "Bruma Hosting Dedicado (ficticio)"
       },
       "marca_de_agua": {
-        "extraida": "LP26-PRA-OFI-S063002",
-        "prefijo_oficial_coincidente": "LP26-PRA-OFI",
+        "extraida": "LP26-FIN-OFI-S088004",
+        "prefijo_oficial_coincidente": "LP26-FIN-OFI",
         "coincide_con_partido": true,
         "es_licenciatario": false
       },
       "captura": {
         "formato": "mpegts",
         "duracion_seg": 6,
-        "capturada_min": 55.0,
+        "capturada_min": 70.0,
         "bytes": 64,
         "decodifica_ok": true,
-        "sha256": "5e3d43564f3ab28fd6d042ea219ea19c302093798435a7d197b3f64092d6a6e6",
-        "contenido_b64": "R8ZHaQHiNtvu3CX0pK1QOi6u3IqdeCtWC5KXH9fBoC+055M8+UR7TajvW7zZMYk64uMzHpA7VzpDRDqGwcP8fQ=="
+        "sha256": "98e1a7c709f4d6b304ed5cdf8a9083f0b93468de62187909c7891fa07c7f4a2a",
+        "contenido_b64": "R2Os/8YeRTCbLwQMQpt9lXd4Akm1Rx6EnCSc2QL2nbmYJD62KVMbZfaSWU5wHfLenE9t4sGKVWgJAjSh6CPhyA=="
       },
       "dns_pasivo": {
-        "consulta": "/dns-pasivo?ip=203.0.113.40",
-        "consultado_utc": "2026-11-12T21:39:34.853+00:00",
+        "consulta": "/dns-pasivo?ip=203.0.113.95",
+        "consultado_utc": "2026-11-13T14:33:27.348+00:00",
         "estado_http": 200,
         "dominios": [
-          "x9.tribuna-pirata.test"
+          "a1.canalpirata-hd.test"
         ],
         "asn": 64600
       },
       "promocion": [
         {
-          "red": "discord",
-          "url": "https://discord.example/invite/tribuna-vip",
-          "minuto": 53.0
+          "red": "telegram",
+          "url": "https://t.example/canalpiratahd",
+          "minuto": 68.0
         },
         {
-          "red": "telegram",
-          "url": "https://t.example/tribunapirata",
-          "minuto": 54.0
+          "red": "discord",
+          "url": "https://discord.example/invite/canalpirata",
+          "minuto": 69.0
         }
       ]
     },
-    "evidence_hash": "7bdaa79d5bbc6a1165415a3a2c37b1ff0c7c0bc6d9b29e57cfa2ae72d1954268",
+    "evidence_hash": "52dcfce095d265d9741a91496c7b8bca365a2886b9641ea90daf2962aa36d696",
     "vence_min": 105,
-    "minuto_deteccion": 55.0,
-    "creado_min": 55.071,
+    "minuto_deteccion": 70.0,
+    "creado_min": 70.02,
     "juez_asignado": "juez-martin-ejemplo",
     "firmante": "juez-martin-ejemplo",
     "firmado_via": "MANUAL_ONE_CLICK",
-    "firma_decision": "7f2fe36609e4a325c245fd14b4c36d307c12eaff79f12d28f71f8169b503551f",
+    "firma_decision": "3580bd8ae0d430238d20dac2fd42632f58e41d13398eddf928b928874cfb4e46",
     "ratificacion": false,
     "slots": [
       {
         "key": "aurora:ip",
         "pid": "aurora",
         "tipo": "ip",
-        "objetivo": "203.0.113.40",
-        "estado": "VENCIDO",
-        "seq": 1,
-        "reintentos": 0,
-        "ordenes": [
-          "EXP-2026-000005-aurora-i1"
-        ],
-        "aplicada_min": 55.681
-      },
-      {
-        "key": "aurora:dominio",
-        "pid": "aurora",
-        "tipo": "dominio",
-        "objetivo": "x9.tribuna-pirata.test",
-        "estado": "VENCIDO",
-        "seq": 1,
-        "reintentos": 0,
-        "ordenes": [
-          "EXP-2026-000005-aurora-d1"
-        ],
-        "aplicada_min": 55.691
-      },
-      {
-        "key": "andina:ip",
-        "pid": "andina",
-        "tipo": "ip",
-        "objetivo": "203.0.113.40",
-        "estado": "VENCIDO",
-        "seq": 1,
-        "reintentos": 0,
-        "ordenes": [
-          "EXP-2026-000005-andina-i1"
-        ],
-        "aplicada_min": 57.575
-      },
-      {
-        "key": "andina:dominio",
-        "pid": "andina",
-        "tipo": "dominio",
-        "objetivo": "x9.tribuna-pirata.test",
-        "estado": "VENCIDO",
-        "seq": 1,
-        "reintentos": 0,
-        "ordenes": [
-          "EXP-2026-000005-andina-d1"
-        ],
-        "aplicada_min": 57.436
-      },
-      {
-        "key": "valle:dominio",
-        "pid": "valle",
-        "tipo": "dominio",
-        "objetivo": "x9.tribuna-pirata.test",
-        "estado": "VENCIDO",
-        "seq": 1,
-        "reintentos": 0,
-        "ordenes": [
-          "EXP-2026-000005-valle-d1"
-        ],
-        "aplicada_min": 60.146
-      },
-      {
-        "key": "cumbre:ip",
-        "pid": "cumbre",
-        "tipo": "ip",
-        "objetivo": "203.0.113.40",
-        "estado": "VENCIDO",
-        "seq": 2,
-        "reintentos": 0,
-        "ordenes": [
-          "EXP-2026-000005-cumbre-i1",
-          "EXP-2026-000005-cumbre-i2"
-        ],
-        "aplicada_min": 57.919
-      },
-      {
-        "key": "cumbre:dominio",
-        "pid": "cumbre",
-        "tipo": "dominio",
-        "objetivo": "x9.tribuna-pirata.test",
-        "estado": "VENCIDO",
-        "seq": 2,
-        "reintentos": 0,
-        "ordenes": [
-          "EXP-2026-000005-cumbre-d1",
-          "EXP-2026-000005-cumbre-d2"
-        ],
-        "aplicada_min": 58.09
-      }
-    ],
-    "hijos": [
-      "EXP-2026-000007"
-    ],
-    "redetecciones": [
-      {
-        "deteccion_id": "D-0025",
-        "minuto": 65.0
-      },
-      {
-        "deteccion_id": "D-0030",
-        "minuto": 75.0
-      }
-    ],
-    "actualizaciones": [
-      {
-        "tipo": "ROTACION_DE_SERVIDOR",
-        "expediente": "EXP-2026-000007",
-        "nuevo_host": "x10.tribuna-pirata.test",
-        "nueva_ip": "203.0.113.41"
-      }
-    ],
-    "confirmado_todos_min": 60.146,
-    "sello_expediente": "0263f8ba1444ff8e7d00c706adf201092c1e6c1ec386402f32ee57c4e04b6b01",
-    "decision": "aprobar",
-    "ordenes_isp": [
-      {
-        "pid": "aurora",
-        "oid": "EXP-2026-000005-aurora-i1",
-        "tipo": "ip",
-        "objetivo": "203.0.113.40",
-        "estado": "vencida",
-        "aplicada_min": 55.681,
-        "juez_id": "juez-martin-ejemplo"
-      },
-      {
-        "pid": "aurora",
-        "oid": "EXP-2026-000005-aurora-d1",
-        "tipo": "dominio",
-        "objetivo": "x9.tribuna-pirata.test",
-        "estado": "vencida",
-        "aplicada_min": 55.691,
-        "juez_id": "juez-martin-ejemplo"
-      },
-      {
-        "pid": "andina",
-        "oid": "EXP-2026-000005-andina-d1",
-        "tipo": "dominio",
-        "objetivo": "x9.tribuna-pirata.test",
-        "estado": "vencida",
-        "aplicada_min": 57.436,
-        "juez_id": "juez-martin-ejemplo"
-      },
-      {
-        "pid": "cumbre",
-        "oid": "EXP-2026-000005-cumbre-i1",
-        "tipo": "ip",
-        "objetivo": "203.0.113.40",
-        "estado": "fallida",
-        "aplicada_min": null,
-        "juez_id": "juez-martin-ejemplo"
-      },
-      {
-        "pid": "andina",
-        "oid": "EXP-2026-000005-andina-i1",
-        "tipo": "ip",
-        "objetivo": "203.0.113.40",
-        "estado": "vencida",
-        "aplicada_min": 57.575,
-        "juez_id": "juez-martin-ejemplo"
-      },
-      {
-        "pid": "cumbre",
-        "oid": "EXP-2026-000005-cumbre-d1",
-        "tipo": "dominio",
-        "objetivo": "x9.tribuna-pirata.test",
-        "estado": "fallida",
-        "aplicada_min": null,
-        "juez_id": "juez-martin-ejemplo"
-      },
-      {
-        "pid": "valle",
-        "oid": "EXP-2026-000005-valle-d1",
-        "tipo": "dominio",
-        "objetivo": "x9.tribuna-pirata.test",
-        "estado": "vencida",
-        "aplicada_min": 60.146,
-        "juez_id": "juez-martin-ejemplo"
-      },
-      {
-        "pid": "cumbre",
-        "oid": "EXP-2026-000005-cumbre-i2",
-        "tipo": "ip",
-        "objetivo": "203.0.113.40",
-        "estado": "vencida",
-        "aplicada_min": 57.919,
-        "juez_id": "juez-martin-ejemplo"
-      },
-      {
-        "pid": "cumbre",
-        "oid": "EXP-2026-000005-cumbre-d2",
-        "tipo": "dominio",
-        "objetivo": "x9.tribuna-pirata.test",
-        "estado": "vencida",
-        "aplicada_min": 58.09,
-        "juez_id": "juez-martin-ejemplo"
-      }
-    ],
-    "verificacion_integridad": {
-      "evidencia_integra": true,
-      "sello_integro": true
-    },
-    "metricas": {
-      "minuto_deteccion": 55.0,
-      "minutos_hasta_confirmacion_en_todos_los_isp": 5.146
-    }
-  },
-  {
-    "id": "EXP-2026-000006",
-    "tipo": "ACTUALIZACION_ROTACION",
-    "parent_id": "EXP-2026-000001",
-    "estado": "EXPIRED",
-    "block_type": "IP_AND_DOMAIN",
-    "analisis_colateral": {
-      "block_type": "IP_AND_DOMAIN",
-      "riesgo_colateral": "BAJO",
-      "dominios_ajenos": [],
-      "motivos": [
-        "La IP aloja solo el stream pirata (2 dominio/s del mismo operador): bloqueo por IP habilitado."
-      ]
-    },
-    "evidencia": {
-      "version": 1,
-      "partido_id": "practica-01",
-      "deteccion_id": "D-0029",
-      "minuto_deteccion": 71.0,
-      "timestamp_utc": "2026-11-12T21:39:50.849+00:00",
-      "pagina": "https://pelotaya.test/en-vivo",
-      "stream_url": "https://s3.pelotaya.test/hls/en-vivo/index.m3u8",
-      "host_stream": "s3.pelotaya.test",
-      "ip_servidor": "198.51.100.77",
-      "asn": {
-        "numero": 64630,
-        "organizacion": "Servidores Litoral (ficticio)"
-      },
-      "marca_de_agua": {
-        "extraida": "LP26-PRA-OFI-S048211",
-        "prefijo_oficial_coincidente": "LP26-PRA-OFI",
-        "coincide_con_partido": true,
-        "es_licenciatario": false
-      },
-      "captura": {
-        "formato": "mpegts",
-        "duracion_seg": 6,
-        "capturada_min": 71.0,
-        "bytes": 64,
-        "decodifica_ok": true,
-        "sha256": "d34e0c24d029af9fd4e51398efa7a3f96d8b96fc6f67cb145f9b285968d8e227",
-        "contenido_b64": "R55ddbmFCeuipPhv1IBxdOKuwe1R/bCqco/NkhitMfiiiSOmxMTTiGF+2fUOmeGSapQ2czxJdpglKu6qr0YHOw=="
-      },
-      "dns_pasivo": {
-        "consulta": "/dns-pasivo?ip=198.51.100.77",
-        "consultado_utc": "2026-11-12T21:39:50.849+00:00",
-        "estado_http": 200,
-        "dominios": [
-          "s3.pelotaya.test",
-          "espejo.pelotaya.test"
-        ],
-        "asn": 64630
-      },
-      "promocion": [
-        {
-          "red": "x",
-          "url": "https://x.example/futbolya_ok/status/1001",
-          "minuto": 1.0
-        }
-      ]
-    },
-    "evidence_hash": "92233a81eb61c40580a9ad8db78e95feff9b052bce93e9f38ec1cc68b9cbf394",
-    "vence_min": 105,
-    "minuto_deteccion": 71.0,
-    "creado_min": 71.072,
-    "juez_asignado": "juez-martin-ejemplo",
-    "firmante": "juez-martin-ejemplo",
-    "firmado_via": "MANUAL_ONE_CLICK",
-    "firma_decision": "3300dda26609088d5a1f9db1ca45c19a92fc6e649de6cd6d6162945b228f199b",
-    "ratificacion": false,
-    "slots": [
-      {
-        "key": "aurora:ip",
-        "pid": "aurora",
-        "tipo": "ip",
-        "objetivo": "198.51.100.77",
+        "objetivo": "203.0.113.95",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000006-aurora-i1"
         ],
-        "aplicada_min": 71.559
+        "aplicada_min": 71.997
       },
       {
         "key": "aurora:dominio",
         "pid": "aurora",
         "tipo": "dominio",
-        "objetivo": "s3.pelotaya.test",
+        "objetivo": "a1.canalpirata-hd.test",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000006-aurora-d1"
         ],
-        "aplicada_min": 71.725
+        "aplicada_min": 72.164
       },
       {
         "key": "andina:ip",
         "pid": "andina",
         "tipo": "ip",
-        "objetivo": "198.51.100.77",
+        "objetivo": "203.0.113.95",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000006-andina-i1"
         ],
-        "aplicada_min": 73.193
+        "aplicada_min": 73.63
       },
       {
         "key": "andina:dominio",
         "pid": "andina",
         "tipo": "dominio",
-        "objetivo": "s3.pelotaya.test",
+        "objetivo": "a1.canalpirata-hd.test",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000006-andina-d1"
         ],
-        "aplicada_min": 72.599
+        "aplicada_min": 73.035
       },
       {
         "key": "valle:dominio",
         "pid": "valle",
         "tipo": "dominio",
-        "objetivo": "s3.pelotaya.test",
+        "objetivo": "a1.canalpirata-hd.test",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000006-valle-d1"
         ],
-        "aplicada_min": 78.817
+        "aplicada_min": 79.254
       },
       {
         "key": "cumbre:ip",
         "pid": "cumbre",
         "tipo": "ip",
-        "objetivo": "198.51.100.77",
+        "objetivo": "203.0.113.95",
         "estado": "VENCIDO",
         "seq": 2,
         "reintentos": 0,
@@ -1465,13 +1454,13 @@
           "EXP-2026-000006-cumbre-i1",
           "EXP-2026-000006-cumbre-i2"
         ],
-        "aplicada_min": 74.397
+        "aplicada_min": 74.861
       },
       {
         "key": "cumbre:dominio",
         "pid": "cumbre",
         "tipo": "dominio",
-        "objetivo": "s3.pelotaya.test",
+        "objetivo": "a1.canalpirata-hd.test",
         "estado": "VENCIDO",
         "seq": 4,
         "reintentos": 1,
@@ -1481,61 +1470,62 @@
           "EXP-2026-000006-cumbre-d3",
           "EXP-2026-000006-cumbre-d4"
         ],
-        "aplicada_min": 77.683
+        "aplicada_min": 77.794
       }
     ],
-    "hijos": [],
+    "hijos": [
+      "EXP-2026-000007"
+    ],
     "redetecciones": [
       {
-        "deteccion_id": "D-0033",
-        "minuto": 81.0
-      },
-      {
-        "deteccion_id": "D-0038",
-        "minuto": 91.0
-      },
-      {
-        "deteccion_id": "D-0042",
-        "minuto": 101.0
+        "deteccion_id": "D-0036",
+        "minuto": 80.0
       }
     ],
-    "actualizaciones": [],
-    "confirmado_todos_min": 78.817,
-    "sello_expediente": "172a6c7fe88bc09c83d2c290d656cc5b914449c7c94471094b7aa80d525acd22",
+    "actualizaciones": [
+      {
+        "tipo": "ROTACION_DE_SERVIDOR",
+        "expediente": "EXP-2026-000007",
+        "nuevo_host": "a2.canalpirata-hd.test",
+        "nueva_ip": "203.0.113.96"
+      }
+    ],
+    "confirmado_todos_min": 79.254,
+    "sello_expediente": "f00fd8dea09af0d180ac8dbcd650e6e17fc9724aa7755e5088ced5742aa51b09",
     "decision": "aprobar",
     "ordenes_isp": [
       {
         "pid": "aurora",
         "oid": "EXP-2026-000006-aurora-i1",
         "tipo": "ip",
-        "objetivo": "198.51.100.77",
+        "objetivo": "203.0.113.95",
         "estado": "vencida",
-        "aplicada_min": 71.559,
+        "aplicada_min": 71.997,
         "juez_id": "juez-martin-ejemplo"
       },
       {
         "pid": "aurora",
         "oid": "EXP-2026-000006-aurora-d1",
         "tipo": "dominio",
-        "objetivo": "s3.pelotaya.test",
+        "objetivo": "a1.canalpirata-hd.test",
         "estado": "vencida",
-        "aplicada_min": 71.725,
+        "aplicada_min": 72.164,
         "juez_id": "juez-martin-ejemplo"
       },
       {
-        "pid": "valle",
-        "oid": "EXP-2026-000006-valle-d1",
+        "pid": "andina",
+        "oid": "EXP-2026-000006-andina-d1",
         "tipo": "dominio",
-        "objetivo": "s3.pelotaya.test",
+        "objetivo": "a1.canalpirata-hd.test",
         "estado": "vencida",
-        "aplicada_min": 78.817,
+        "aplicada_min": 73.035,
         "juez_id": "juez-martin-ejemplo"
       },
       {
         "pid": "cumbre",
-        "oid": "EXP-2026-000006-cumbre-d1",
-        "tipo": "dominio",
-        "objetivo": "s3.pelotaya.test",
+        "oid": "EXP-2026-000006-cumbre-i1",
+        "tipo": "ip",
+        "objetivo": "203.0.113.95",
         "estado": "fallida",
         "aplicada_min": null,
         "juez_id": "juez-martin-ejemplo"
@@ -1544,34 +1534,34 @@
         "pid": "andina",
         "oid": "EXP-2026-000006-andina-i1",
         "tipo": "ip",
-        "objetivo": "198.51.100.77",
+        "objetivo": "203.0.113.95",
         "estado": "vencida",
-        "aplicada_min": 73.193,
-        "juez_id": "juez-martin-ejemplo"
-      },
-      {
-        "pid": "andina",
-        "oid": "EXP-2026-000006-andina-d1",
-        "tipo": "dominio",
-        "objetivo": "s3.pelotaya.test",
-        "estado": "vencida",
-        "aplicada_min": 72.599,
+        "aplicada_min": 73.63,
         "juez_id": "juez-martin-ejemplo"
       },
       {
         "pid": "cumbre",
-        "oid": "EXP-2026-000006-cumbre-i1",
-        "tipo": "ip",
-        "objetivo": "198.51.100.77",
+        "oid": "EXP-2026-000006-cumbre-d1",
+        "tipo": "dominio",
+        "objetivo": "a1.canalpirata-hd.test",
         "estado": "fallida",
         "aplicada_min": null,
+        "juez_id": "juez-martin-ejemplo"
+      },
+      {
+        "pid": "valle",
+        "oid": "EXP-2026-000006-valle-d1",
+        "tipo": "dominio",
+        "objetivo": "a1.canalpirata-hd.test",
+        "estado": "vencida",
+        "aplicada_min": 79.254,
         "juez_id": "juez-martin-ejemplo"
       },
       {
         "pid": "cumbre",
         "oid": "EXP-2026-000006-cumbre-d2",
         "tipo": "dominio",
-        "objetivo": "s3.pelotaya.test",
+        "objetivo": "a1.canalpirata-hd.test",
         "estado": "fallida",
         "aplicada_min": null,
         "juez_id": "juez-martin-ejemplo"
@@ -1580,25 +1570,25 @@
         "pid": "cumbre",
         "oid": "EXP-2026-000006-cumbre-i2",
         "tipo": "ip",
-        "objetivo": "198.51.100.77",
+        "objetivo": "203.0.113.95",
         "estado": "vencida",
-        "aplicada_min": 74.397,
+        "aplicada_min": 74.861,
         "juez_id": "juez-martin-ejemplo"
       },
       {
         "pid": "cumbre",
         "oid": "EXP-2026-000006-cumbre-d3",
         "tipo": "dominio",
-        "objetivo": "s3.pelotaya.test",
+        "objetivo": "a1.canalpirata-hd.test",
         "estado": "vencida",
-        "aplicada_min": 77.683,
+        "aplicada_min": 77.794,
         "juez_id": "juez-martin-ejemplo"
       },
       {
         "pid": "cumbre",
         "oid": "EXP-2026-000006-cumbre-d4",
         "tipo": "dominio",
-        "objetivo": "s3.pelotaya.test",
+        "objetivo": "a1.canalpirata-hd.test",
         "estado": "fallida",
         "aplicada_min": null,
         "juez_id": "juez-martin-ejemplo"
@@ -1609,14 +1599,14 @@
       "sello_integro": true
     },
     "metricas": {
-      "minuto_deteccion": 71.0,
-      "minutos_hasta_confirmacion_en_todos_los_isp": 7.817
+      "minuto_deteccion": 70.0,
+      "minutos_hasta_confirmacion_en_todos_los_isp": 9.254
     }
   },
   {
     "id": "EXP-2026-000007",
     "tipo": "ACTUALIZACION_ROTACION",
-    "parent_id": "EXP-2026-000005",
+    "parent_id": "EXP-2026-000006",
     "estado": "EXPIRED",
     "block_type": "IP_AND_DOMAIN",
     "analisis_colateral": {
@@ -1629,135 +1619,135 @@
     },
     "evidencia": {
       "version": 1,
-      "partido_id": "practica-01",
-      "deteccion_id": "D-0034",
-      "minuto_deteccion": 82.0,
-      "timestamp_utc": "2026-11-12T21:40:01.897+00:00",
-      "pagina": "https://tribuna-pirata.test/ver",
-      "stream_url": "https://x10.tribuna-pirata.test/hls/en-vivo/index.m3u8",
-      "host_stream": "x10.tribuna-pirata.test",
-      "ip_servidor": "203.0.113.41",
+      "partido_id": "final-01",
+      "deteccion_id": "D-0041",
+      "minuto_deteccion": 88.0,
+      "timestamp_utc": "2026-11-13T14:39:27.239+00:00",
+      "pagina": "https://canalpirata-hd.test/vip",
+      "stream_url": "https://a2.canalpirata-hd.test/hls/en-vivo/index.m3u8",
+      "host_stream": "a2.canalpirata-hd.test",
+      "ip_servidor": "203.0.113.96",
       "asn": {
         "numero": 64600,
         "organizacion": "Bruma Hosting Dedicado (ficticio)"
       },
       "marca_de_agua": {
-        "extraida": "LP26-PRA-OFI-S063002",
-        "prefijo_oficial_coincidente": "LP26-PRA-OFI",
+        "extraida": "LP26-FIN-OFI-S088004",
+        "prefijo_oficial_coincidente": "LP26-FIN-OFI",
         "coincide_con_partido": true,
         "es_licenciatario": false
       },
       "captura": {
         "formato": "mpegts",
         "duracion_seg": 6,
-        "capturada_min": 82.0,
+        "capturada_min": 88.0,
         "bytes": 64,
         "decodifica_ok": true,
-        "sha256": "767fccc3e8c85585c487925e6d3b8f51e3dd4d796d61cebb11fc2b6e9b2828ee",
-        "contenido_b64": "R6VWz/XEpDLRE3L0IVUXZgJLzsy2JgoVxDZb+CmnTa5fue8v5LlzyuzYyUon2CnqfjvSZHfvIE4Qv1a41foqCw=="
+        "sha256": "437229b54a2ff81b92ae2f77d08edd569c937af3fcb285448492bf78e1f70bbd",
+        "contenido_b64": "R62KMy+7wTVNovUz1tFe3Tcy08WZr3YrhPDLSJGMRg9Q2xrb4YLdjep05eOFK9L3Ck1ORx0SoVmR5wMrm9IqGw=="
       },
       "dns_pasivo": {
-        "consulta": "/dns-pasivo?ip=203.0.113.41",
-        "consultado_utc": "2026-11-12T21:40:01.897+00:00",
+        "consulta": "/dns-pasivo?ip=203.0.113.96",
+        "consultado_utc": "2026-11-13T14:39:27.239+00:00",
         "estado_http": 200,
         "dominios": [
-          "x10.tribuna-pirata.test"
+          "a2.canalpirata-hd.test"
         ],
         "asn": 64600
       },
       "promocion": [
         {
-          "red": "discord",
-          "url": "https://discord.example/invite/tribuna-vip",
-          "minuto": 53.0
+          "red": "telegram",
+          "url": "https://t.example/canalpiratahd",
+          "minuto": 68.0
         },
         {
-          "red": "telegram",
-          "url": "https://t.example/tribunapirata",
-          "minuto": 54.0
+          "red": "discord",
+          "url": "https://discord.example/invite/canalpirata",
+          "minuto": 69.0
         }
       ]
     },
-    "evidence_hash": "214eaaabf7e80c5d28fcad413f3bcb210d7677c388797c87b3feeb87e76071c5",
+    "evidence_hash": "cfe38286fd3ca74a66b821f5b54584397b3cc783fcdc3e09ae90d7fa841d37ef",
     "vence_min": 105,
-    "minuto_deteccion": 82.0,
-    "creado_min": 82.118,
+    "minuto_deteccion": 88.0,
+    "creado_min": 88.021,
     "juez_asignado": "juez-martin-ejemplo",
     "firmante": "juez-martin-ejemplo",
     "firmado_via": "MANUAL_ONE_CLICK",
-    "firma_decision": "b771c2d61de19ce6051019e6cc50e132a01021dde68e75a7430422f15c96b197",
+    "firma_decision": "7b4d263540402adf03d48d524f713635f330b66e8d4091868f360fffb84ba05b",
     "ratificacion": false,
     "slots": [
       {
         "key": "aurora:ip",
         "pid": "aurora",
         "tipo": "ip",
-        "objetivo": "203.0.113.41",
+        "objetivo": "203.0.113.96",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000007-aurora-i1"
         ],
-        "aplicada_min": 82.797
+        "aplicada_min": 93.474
       },
       {
         "key": "aurora:dominio",
         "pid": "aurora",
         "tipo": "dominio",
-        "objetivo": "x10.tribuna-pirata.test",
+        "objetivo": "a2.canalpirata-hd.test",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000007-aurora-d1"
         ],
-        "aplicada_min": 82.754
+        "aplicada_min": 93.431
       },
       {
         "key": "andina:ip",
         "pid": "andina",
         "tipo": "ip",
-        "objetivo": "203.0.113.41",
+        "objetivo": "203.0.113.96",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000007-andina-i1"
         ],
-        "aplicada_min": 84.033
+        "aplicada_min": 94.71
       },
       {
         "key": "andina:dominio",
         "pid": "andina",
         "tipo": "dominio",
-        "objetivo": "x10.tribuna-pirata.test",
+        "objetivo": "a2.canalpirata-hd.test",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000007-andina-d1"
         ],
-        "aplicada_min": 84.125
+        "aplicada_min": 94.801
       },
       {
         "key": "valle:dominio",
         "pid": "valle",
         "tipo": "dominio",
-        "objetivo": "x10.tribuna-pirata.test",
+        "objetivo": "a2.canalpirata-hd.test",
         "estado": "VENCIDO",
         "seq": 1,
         "reintentos": 0,
         "ordenes": [
           "EXP-2026-000007-valle-d1"
         ],
-        "aplicada_min": 89.488
+        "aplicada_min": 100.165
       },
       {
         "key": "cumbre:ip",
         "pid": "cumbre",
         "tipo": "ip",
-        "objetivo": "203.0.113.41",
+        "objetivo": "203.0.113.96",
         "estado": "VENCIDO",
         "seq": 2,
         "reintentos": 0,
@@ -1765,13 +1755,13 @@
           "EXP-2026-000007-cumbre-i1",
           "EXP-2026-000007-cumbre-i2"
         ],
-        "aplicada_min": 84.829
+        "aplicada_min": 95.505
       },
       {
         "key": "cumbre:dominio",
         "pid": "cumbre",
         "tipo": "dominio",
-        "objetivo": "x10.tribuna-pirata.test",
+        "objetivo": "a2.canalpirata-hd.test",
         "estado": "VENCIDO",
         "seq": 2,
         "reintentos": 0,
@@ -1779,104 +1769,100 @@
           "EXP-2026-000007-cumbre-d1",
           "EXP-2026-000007-cumbre-d2"
         ],
-        "aplicada_min": 85.994
+        "aplicada_min": 96.699
       }
     ],
     "hijos": [],
     "redetecciones": [
       {
-        "deteccion_id": "D-0039",
-        "minuto": 92.0
-      },
-      {
-        "deteccion_id": "D-0043",
-        "minuto": 102.0
+        "deteccion_id": "D-0046",
+        "minuto": 98.0
       }
     ],
     "actualizaciones": [],
-    "confirmado_todos_min": 89.488,
-    "sello_expediente": "bbd1fd25154c3cbc7a42533b72d5c32c1a42db6d3b008819adb352ac33556abf",
+    "confirmado_todos_min": 100.165,
+    "sello_expediente": "fb3ed36eb7076004582b06fcf1aa45d9050ec552f39c0424c1ea30ee7db286dd",
     "decision": "aprobar",
     "ordenes_isp": [
       {
         "pid": "aurora",
         "oid": "EXP-2026-000007-aurora-i1",
         "tipo": "ip",
-        "objetivo": "203.0.113.41",
+        "objetivo": "203.0.113.96",
         "estado": "vencida",
-        "aplicada_min": 82.797,
+        "aplicada_min": 93.474,
         "juez_id": "juez-martin-ejemplo"
       },
       {
         "pid": "aurora",
         "oid": "EXP-2026-000007-aurora-d1",
         "tipo": "dominio",
-        "objetivo": "x10.tribuna-pirata.test",
+        "objetivo": "a2.canalpirata-hd.test",
         "estado": "vencida",
-        "aplicada_min": 82.754,
+        "aplicada_min": 93.431,
         "juez_id": "juez-martin-ejemplo"
       },
       {
         "pid": "andina",
         "oid": "EXP-2026-000007-andina-d1",
         "tipo": "dominio",
-        "objetivo": "x10.tribuna-pirata.test",
+        "objetivo": "a2.canalpirata-hd.test",
         "estado": "vencida",
-        "aplicada_min": 84.125,
-        "juez_id": "juez-martin-ejemplo"
-      },
-      {
-        "pid": "valle",
-        "oid": "EXP-2026-000007-valle-d1",
-        "tipo": "dominio",
-        "objetivo": "x10.tribuna-pirata.test",
-        "estado": "vencida",
-        "aplicada_min": 89.488,
-        "juez_id": "juez-martin-ejemplo"
-      },
-      {
-        "pid": "andina",
-        "oid": "EXP-2026-000007-andina-i1",
-        "tipo": "ip",
-        "objetivo": "203.0.113.41",
-        "estado": "vencida",
-        "aplicada_min": 84.033,
-        "juez_id": "juez-martin-ejemplo"
-      },
-      {
-        "pid": "cumbre",
-        "oid": "EXP-2026-000007-cumbre-d1",
-        "tipo": "dominio",
-        "objetivo": "x10.tribuna-pirata.test",
-        "estado": "fallida",
-        "aplicada_min": null,
+        "aplicada_min": 94.801,
         "juez_id": "juez-martin-ejemplo"
       },
       {
         "pid": "cumbre",
         "oid": "EXP-2026-000007-cumbre-i1",
         "tipo": "ip",
-        "objetivo": "203.0.113.41",
+        "objetivo": "203.0.113.96",
         "estado": "vencida",
-        "aplicada_min": 84.829,
+        "aplicada_min": 95.505,
+        "juez_id": "juez-martin-ejemplo"
+      },
+      {
+        "pid": "andina",
+        "oid": "EXP-2026-000007-andina-i1",
+        "tipo": "ip",
+        "objetivo": "203.0.113.96",
+        "estado": "vencida",
+        "aplicada_min": 94.71,
         "juez_id": "juez-martin-ejemplo"
       },
       {
         "pid": "cumbre",
-        "oid": "EXP-2026-000007-cumbre-d2",
+        "oid": "EXP-2026-000007-cumbre-d1",
         "tipo": "dominio",
-        "objetivo": "x10.tribuna-pirata.test",
+        "objetivo": "a2.canalpirata-hd.test",
+        "estado": "fallida",
+        "aplicada_min": null,
+        "juez_id": "juez-martin-ejemplo"
+      },
+      {
+        "pid": "valle",
+        "oid": "EXP-2026-000007-valle-d1",
+        "tipo": "dominio",
+        "objetivo": "a2.canalpirata-hd.test",
         "estado": "vencida",
-        "aplicada_min": 85.994,
+        "aplicada_min": 100.165,
         "juez_id": "juez-martin-ejemplo"
       },
       {
         "pid": "cumbre",
         "oid": "EXP-2026-000007-cumbre-i2",
         "tipo": "ip",
-        "objetivo": "203.0.113.41",
+        "objetivo": "203.0.113.96",
         "estado": "vencida",
-        "aplicada_min": 85.746,
+        "aplicada_min": 96.45,
+        "juez_id": "juez-martin-ejemplo"
+      },
+      {
+        "pid": "cumbre",
+        "oid": "EXP-2026-000007-cumbre-d2",
+        "tipo": "dominio",
+        "objetivo": "a2.canalpirata-hd.test",
+        "estado": "vencida",
+        "aplicada_min": 96.699,
         "juez_id": "juez-martin-ejemplo"
       }
     ],
@@ -1885,8 +1871,8 @@
       "sello_integro": true
     },
     "metricas": {
-      "minuto_deteccion": 82.0,
-      "minutos_hasta_confirmacion_en_todos_los_isp": 7.488
+      "minuto_deteccion": 88.0,
+      "minutos_hasta_confirmacion_en_todos_los_isp": 12.165
     }
   }
 ]

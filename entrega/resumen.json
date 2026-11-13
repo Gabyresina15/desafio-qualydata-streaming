@@ -3,17 +3,17 @@
   "eventos_por_tipo": {
     "PLATAFORMA_INICIADA": 1,
     "TURNO_INICIAL": 1,
-    "LOGIN_JUEZ": 2,
-    "DETECCION": 43,
+    "DETECCION": 50,
     "EXPEDIENTE_CREADO": 7,
     "ASIGNACION_JUEZ": 7,
+    "IGNORED_LEGITIMATE": 13,
+    "LOGIN_JUEZ": 2,
     "FIRMA_JUDICIAL": 7,
     "ADAPTACION_PAYLOAD": 5,
     "ENVIO_ISP": 55,
     "CONFIRMACION_ISP": 44,
-    "IGNORED_LEGITIMATE": 5,
+    "REDETECCION": 30,
     "EXPEDIENTE_ACTIVO": 7,
-    "REDETECCION": 31,
     "EXPEDIENTE_ACTUALIZADO": 3,
     "FALLO_ISP": 11,
     "REINTENTO_ISP": 3,
@@ -26,8 +26,8 @@
     "LEDGER_SELLADO": 2
   },
   "latencia_deteccion_a_confirmacion_total_min": {
-    "promedio": 6.561,
-    "maxima": 7.817
+    "promedio": 10.816,
+    "maxima": 15.201
   },
   "bloqueos_ip_vigentes_al_final": 0
 }
